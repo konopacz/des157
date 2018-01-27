@@ -254,7 +254,7 @@ header div.comicSpitter {
   width: 100px;
   height: 100px;
   left: 970px;
-  top: 800px;
+  top: 1600px;
   opacity: 0;
   position: absolute;
   animation-name: comic1;
@@ -288,12 +288,24 @@ header div.comicSpitter {
   40% {
     left: 970px;
     top: 800px;
-    transform: rotate(0deg);
+    transform: rotate(13deg);
+  }
+  60% {
+    left: 1050px;
+    top: 1100px;
+    opacity: 1;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: 1300px;
+    top: 1300px;
+    transform: rotate(13deg);
   }
   100% {
-    left: 970px;
-    top: 800px;
-    opacity: 1;
+    left: 1050px;
+    top: 1600px;
+    transform: rotate(-13deg);
+    opacity: 0;
   }
 }
 
@@ -301,7 +313,7 @@ header div.comicSpitter2 {
   width: 100px;
   height: 100px;
   opacity: 0;
-  left: 1050px;
+  left: 1600px;
   top: 800px;
   position: absolute;
   animation-name: comic2;
@@ -340,12 +352,24 @@ header div.comicSpitter2 {
   40% {
     left: 1050px;
     top: 800px;
-    transform: rotate(0deg);
+    transform: rotate(13deg);
+  }
+  60% {
+    left: 1050px;
+    top: 1100px;
+    opacity: 1;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: 1300px;
+    top: 1300px;
+    transform: rotate(13deg);
   }
   100% {
     left: 1050px;
-    top: 800px;
-    opacity: 1;
+    top: 1600px;
+    transform: rotate(-13deg);
+    opacity: 0;
   }
 }
 
