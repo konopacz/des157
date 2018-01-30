@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.pagewrapper {
+  overflow: hidden
+
+}
+
 #newComic {
   width: 960px;
   height: 300px;
@@ -231,7 +236,7 @@ label {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -298,12 +303,12 @@ header div.comicSpitter {
   }
   80% {
     left: 1300px;
-    top: 1300px;
+    top: 1200px;
     transform: rotate(13deg);
   }
   100% {
-    left: 1050px;
-    top: 1600px;
+    left: 1750px;
+    top: 1200px;
     transform: rotate(-13deg);
     opacity: 0;
   }
@@ -366,8 +371,8 @@ header div.comicSpitter2 {
     transform: rotate(13deg);
   }
   100% {
-    left: 1050px;
-    top: 1600px;
+    left: 1750px;
+    top: 1300px;
     transform: rotate(-13deg);
     opacity: 0;
   }
