@@ -1,0 +1,357 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+*:focus {
+  outline: 0;
+  outline: none;
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+footer {
+  display: none;
+}
+
+.scroller {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  /* animation-name: scrolling;
+  animation-duration: 200s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
+}
+
+/* @keyframes scrolling {
+  0%   {left:0px;}
+
+  100% {left:-17000px;} */
+
+.col, .col2:hover {
+  cursor: pointer;
+}
+
+.scroller img {
+  width: auto;
+  height: 350px;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  overflow: visible;
+}
+
+main {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+}
+
+main img {
+  margin: auto;
+  width: 120px;
+  height: auto;
+  position: relative;
+  top: 120px;
+}
+
+section {
+  width: auto;
+  position: absolute;
+  bottom: 0%;
+  height: 50%;
+}
+
+section .inventory {
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  z-index: 0;
+  height: auto;
+  background-color: #213525;
+}
+
+.inventory img {
+  max-width: 100%;
+}
+
+header img {
+  width: 80%;
+}
+
+.tabs img {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  z-index: 2;
+  bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+
+.tabs, .stuff {
+  width: 100%;
+}
+
+.col {
+  width: 33.33333333%;
+  float: left;
+  text-align: center;
+}
+
+.col2 {
+  width: 40%;
+  float: left;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.col2:first-child {
+  padding-left: 10%;
+}
+
+.stuff img {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  z-index: 2;
+  bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+.outfit img {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  z-index: 2;
+  bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+.stuff {
+  display: block;
+}
+
+.outfit {
+  display: none;
+}
+
+#pirate {
+  display: none;
+}
+
+#armor {
+  display: none;
+}
+
+#workout {
+  display: none;
+}
+
+#erik {
+  display: block;
+  width: 90%;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  z-index: 3;
+}
+
+#overlay img {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+}
+
+#overlay p {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  width: 50%;
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------*/
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    max-width: 80%;
+    margin: auto;
+    height: 700px;
+    border: 5px solid black;
+  }
+  section {
+    width: 300px;
+    position: relative;
+    float: right;
+    height: 200px;
+  }
+  section .inventory {
+    width: 300px;
+    float: right;
+    height: 50%;
+    height: 300px;
+    position: absolute;
+    background-color: transparent;
+  }
+  header img {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+    max-width: 60%;
+  }
+  header {
+    position: relative;
+    text-align: center;
+  }
+  nav {
+    position: relative;
+    left: 0px;
+    width: 300px;
+    height: 100px;
+  }
+  .stuff {
+    position: relative;
+    top: -120px;
+    left: 0px;
+    width: 300px;
+    height: 100px;
+  }
+  .inventorycontainer {
+    position: relative;
+    top: 0px;
+  }
+  .outfit {
+    position: relative;
+    top: -120px;
+    left: 0px;
+    width: 300px;
+    height: 100px;
+  }
+  .tabnav {
+    position: relative;
+    top: -100px;
+  }
+  main img {
+    margin: auto;
+    width: 120px;
+    height: auto;
+    position: relative;
+    top: 50px;
+  }
+  #erik {
+    width: 500px;
+    margin-top: 30px;
+  }
+  #pirate {
+    display: none;
+    margin-top: 40px;
+  }
+  #armor {
+    display: none;
+    margin-top: 40px;
+  }
+  #workout {
+    margin-top: 40px;
+    display: none;
+  }
+  main {
+    width: 100%;
+    overflow: hidden;
+    height: 60%;
+    text-align: center;
+  }
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .scroller {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 700px;
+    width: auto;
+    animation-name: scrolling;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .scroller img {
+    height: 100%;
+  }
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  footer {
+    display: block;
+    clear: both;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: 40px;
+  }
+  footer p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    float: left;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -17000px;
+  }
+}
