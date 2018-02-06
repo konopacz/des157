@@ -41,7 +41,7 @@ footer {
 
 .scroller img {
   width: auto;
-  height: 350px;
+  height: 380px;
 }
 
 header {
@@ -145,6 +145,22 @@ header img {
   padding-top: 10px;
 }
 
+.zoom img {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  z-index: 2;
+  bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+.zoom {
+  display: none;
+}
+
 .stuff {
   display: block;
 }
@@ -170,6 +186,11 @@ header img {
   width: 90%;
 }
 
+#rocket {
+  display: none;
+  width: 40%;
+}
+
 #overlay {
   position: absolute;
   top: 0;
@@ -182,7 +203,7 @@ header img {
   z-index: 3;
 }
 
-#overlay img {
+.overlaycontainer {
   position: absolute;
   top: 0%;
   left: 50%;
@@ -194,14 +215,16 @@ header img {
 
 #overlay p {
   position: absolute;
-  top: 35%;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -100%);
   text-align: center;
   line-height: 20px;
   color: white;
   font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
   width: 50%;
+  line-height: 12px;
 }
 
 #close {
@@ -211,14 +234,46 @@ header img {
   cursor: pointer;
 }
 
+#overlayimg {
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  max-width: 90%;
+  height: auto;
+}
+
 /* ------------------------------------------------*/
 
 @media only screen and (min-width: 500px) {
   .wrapper {
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
     height: 700px;
     border: 5px solid black;
+    margin-top: 10px;
+  }
+  #overlay p {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    width: 300px;
+    font-size: 12px;
+  }
+  #overlayimg {
+    width: 150px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    max-width: 90%;
+    height: auto;
   }
   section {
     width: 300px;
@@ -263,6 +318,13 @@ header img {
     top: 0px;
   }
   .outfit {
+    position: relative;
+    top: -120px;
+    left: 0px;
+    width: 300px;
+    height: 100px;
+  }
+  .zoom {
     position: relative;
     top: -120px;
     left: 0px;
@@ -320,6 +382,12 @@ header img {
   .scroller img {
     height: 100%;
   }
+  #rocket {
+    animation-name: rocket;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
   #close {
     position: absolute;
     top: 20px;
@@ -338,7 +406,7 @@ header img {
   }
   footer p {
     font-family: 'Press Start 2P', cursive;
-    font-size: 8px;
+    font-size: 16px;
     float: left;
     margin-top: 5px;
     text-decoration: none;
@@ -353,5 +421,20 @@ header img {
   }
   100% {
     left: -17000px;
+  }
+}
+
+@keyframes rocket {
+  0% {
+    top: 50px;
+    transform: rotate(10deg);
+  }
+  50% {
+    top: 120px;
+    transform: rotate(-10deg);
+  }
+  100% {
+    top: 50px;
+    transform: rotate(10deg);
   }
 }

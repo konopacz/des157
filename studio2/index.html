@@ -23,7 +23,7 @@
 
 <body>
   <div class='wrapper'>
-    <div class='scroller'>
+    <div id='scroller' class='scroller'>
       <img src='images/rollinghills.png' alt='hills'>
     </div>
     <header>
@@ -35,17 +35,19 @@
       <img id='armor' class='mainguy' src="images/erikarmor.gif" alt='guy'>
       <img id='workout' class='mainguy' src="images/workoutanimation.gif" alt='guy'>
       <img id='erik' class='mainguy' src="images/erikanimation.gif" alt='guy'>
+      <img id='rocket' class='mainguy' src="images/flyingrocket.gif" alt='guy'>
     </main>
 
 
 
     <section>
       <div class='inventorycontainer'>
+
         <img class='inventory' src="images/inventory.png" alt="invent">
         <nav class='tabnav'>
           <div class='tabs'>
             <div class='col'>
-              <img src="images/statspixel.png" alt="stats">
+              <img id="rocketbtn" src="images/rocket.png" alt="stats">
             </div>
             <div class='col'>
               <img id="stuffbtn" src="images/bagicon.png" alt="stats">
@@ -87,14 +89,24 @@
           </div>
 
         </div>
-      </div>
 
+
+
+        <div id='zoom' class='zoom'>
+          <div class='col2'>
+            <img id='zoombtn' src="images/zoomdark.png" alt="stats">
+
+          </div>
+        </div>
+
+      </div>
 
     </section>
 
     <section id="overlay">
-      <img src="images/overlaybox.png" alt="overlay">
+      <img class='overlaycontainer' src="images/overlaybox.png" alt="overlay">
       <p id='overlaytxt'>Test Text</p>
+      <img src='images/pixel.png' id='overlayimg' alt='overlaytext'>
       <div id="close">&#10006;</div>
     </section>
   </div>
