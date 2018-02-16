@@ -1,3 +1,7 @@
+if (!annyang) {
+  console.log("Speech Recognition is not supported");
+}
+
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
