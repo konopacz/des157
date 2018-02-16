@@ -1,0 +1,71 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 90%;
+  width: 90%;
+  margin: auto;
+  height: 700px;
+  border: 5px solid black;
+  margin-top: 10px;
+  background-color: yellow;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#character {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  background-color: blue;
+  animation-name: null;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+#test {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  background-color: purple;
+}
+
+#enemt {
+  width: 100px;
+  height: 100px;
+  right: -100px;
+  position: absolute;
+  bottom: 100px;
+  background-color: red;
+  animation-name: attack;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 100px;
+  }
+  50% {
+    bottom: 500px;
+  }
+  100% {
+    bottom: 100px;
+  }
+}
+
+@keyframes attack {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 1500px;
+  }
+}
