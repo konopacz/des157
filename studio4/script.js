@@ -54,11 +54,21 @@ if (annyang) {
     var commands = {
   'jump': function() {
     console.log('jumpheard');
+    if(canJump == true){
     character.style.animationName = "jump";
         canJump = false;
+        canDuck = false;
         setTimeout(reset, 2100);
-
+      }
   }
+  'duck': function() {
+    console.log('duckheard');
+    character.style.animationName = "duck";
+        canDuck = false;
+        canJump = false;
+        setTimeout(reset, 2100);
+  }
+
 };
 
 function reset() {
