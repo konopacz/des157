@@ -63,7 +63,7 @@ if (annyang) {
 //   }
 // };
 
- var commands2 = {
+ var commands = {
 
 'duck': function() {
   console.log('duckheard');
@@ -107,7 +107,7 @@ function reset() {
 
   // Add our commands to annyang
   annyang.addCommands(commands);
-    annyang.addCommands(commands2);
+    // annyang.addCommands(commands2);
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
