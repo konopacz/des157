@@ -51,17 +51,17 @@ function draw() {
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
 
-    var commands = {
-  'jump': function() {
-    console.log('jumpheard');
-    if(canJump == true){
-    character.style.animationName = "jump";
-        canJump = false;
-        canDuck = false;
-        setTimeout(reset, 2100);
-      }
-  }
-};
+//     var commands = {
+//   'jump': function() {
+//     console.log('jumpheard');
+//     if(canJump == true){
+//     character.style.animationName = "jump";
+//         canJump = false;
+//         canDuck = false;
+//         setTimeout(reset, 2100);
+//       }
+//   }
+// };
 
  var commands2 = {
 
