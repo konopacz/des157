@@ -61,6 +61,18 @@ body {
   }
 }
 
+@keyframes duck {
+  0% {
+    height: 100px;
+  }
+  50% {
+    height: 10px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
 @keyframes attack {
   0% {
     right: -100px;

@@ -6,6 +6,7 @@ var micLevel;
 var character = document.getElementById('character');
 var enemt = document.getElementById('enemt');
 var canJump = true;
+var canDuck = true;
 var col;
 
 function setup() {
@@ -26,18 +27,19 @@ function draw() {
   }
 
 
-  micLevel = mic.getLevel();
-  if (micLevel > 0.07 && canJump == true) {
-    console.log('jumping');
-    character.style.animationName = "jump";
-    canJump = false;
-    setTimeout(resetjump, 2100);
-  }
+  // micLevel = mic.getLevel();
+  // if (micLevel > 0.07 && canJump == true) {
+  //   console.log('jumping');
+  //   character.style.animationName = "jump";
+  //   canJump = false;
+  //   setTimeout(resetjump, 2100);
+  // }
 
-  function resetjump() {
+  function reset() {
     character.style.animationName = "null";
     console.log('jumpreset');
     canJump = true;
+    canDuck = true;
   }
 
 }
@@ -48,12 +50,25 @@ function draw() {
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'yes': function() {
+    'jump': function() {
+      if (canJump == true) {
+        console.log('jumpHead');
+        character.style.animationName = "jump";
+        canJump = false;
+        setTimeout(reset, 2100);
+      }
+    }
+  }; {
 
-      console.log('commandheard');
-      character.style.animationName = "jump";
-      canJump = false;
-      setTimeout(resetjump, 2100);
+    'duck': function() {
+
+      if (canDuck == true) {
+        console.log('duckHeard');
+        character.style.animationName = "duck";
+        canJump = false;
+        canDuck = false;
+        setTimeout(reset, 2100);
+      }
     }
   };
 
