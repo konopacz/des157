@@ -58,7 +58,7 @@ if (annyang) {
         setTimeout(reset, 2100);
       }
     }
-  }; {
+
 
     'duck': function() {
 
