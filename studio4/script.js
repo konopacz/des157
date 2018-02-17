@@ -61,14 +61,17 @@ if (annyang) {
         setTimeout(reset, 2100);
       }
   }
-  'duck': function() {
-    console.log('duckheard');
-    character.style.animationName = "duck";
-        canDuck = false;
-        canJump = false;
-        setTimeout(reset, 2100);
-  }
+};
 
+ var commands2 = {
+
+'duck': function() {
+  console.log('duckheard');
+  character.style.animationName = "duck";
+      canDuck = false;
+      canJump = false;
+      setTimeout(reset, 2100);
+}
 };
 
 function reset() {
