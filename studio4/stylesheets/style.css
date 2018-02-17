@@ -10,7 +10,7 @@ body {
   height: 700px;
   border: 5px solid black;
   margin-top: 10px;
-  background-color: yellow;
+  background-color: white;
   position: relative;
   overflow-x: hidden;
 }
