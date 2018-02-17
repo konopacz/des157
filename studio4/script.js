@@ -50,27 +50,31 @@ function draw() {
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
-    'jump': function() {
-      if (canJump == true) {
-        console.log('jumpHead');
-        character.style.animationName = "jump";
-        canJump = false;
-        setTimeout(reset, 2100);
-      }
-    }
+    'jump': jump,
 
 
-    'duck': function() {
-
-      if (canDuck == true) {
-        console.log('duckHeard');
-        character.style.animationName = "duck";
-        canJump = false;
-        canDuck = false;
-        setTimeout(reset, 2100);
-      }
-    }
+    'duck': duck,
   };
+
+  jump() {
+    if (canJump == true) {
+      console.log('jumpHead');
+      character.style.animationName = "jump";
+      canJump = false;
+      setTimeout(reset, 2100);
+    }
+  }
+
+  duck() {
+
+    if (canDuck == true) {
+      console.log('duckHeard');
+      character.style.animationName = "duck";
+      canJump = false;
+      canDuck = false;
+      setTimeout(reset, 2100);
+    }
+  }
 
   // Add our commands to annyang
   annyang.addCommands(commands);
