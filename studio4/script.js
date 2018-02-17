@@ -8,6 +8,7 @@ var enemt = document.getElementById('enemt');
 var canJump = true;
 var canDuck = true;
 var col;
+var wantsToJump;
 
 function setup() {
 
@@ -59,6 +60,13 @@ if (annyang) {
 
   }
 };
+
+function reset() {
+  character.style.animationName = "null";
+  console.log('jumpreset');
+  canJump = true;
+  canDuck = true;
+}
 
 
 
