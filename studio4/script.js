@@ -107,7 +107,7 @@ function reset() {
 
   // Add our commands to annyang
   annyang.addCommands(commands2);
-  annyang.init(commands, false);
+  annyang.addCommands(commands);
     // annyang.addCommands(commands2);
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
