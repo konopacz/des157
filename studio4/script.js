@@ -21,7 +21,7 @@ function draw() {
 
   col = mezr.distance(character, enemt);
   if (col < 0.001) {
-    console.log(col);
+
     alert("You hit the enemy!");
   }
 
@@ -49,8 +49,11 @@ if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
   var commands = {
     'yes': function() {
-      alert("YES YES OH GOD YES");
+
       console.log('commandheard');
+      character.style.animationName = "jump";
+      canJump = false;
+      setTimeout(resetjump, 2100);
     }
   };
 
