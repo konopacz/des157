@@ -51,17 +51,17 @@ function draw() {
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
 
-//     var commands = {
-//   'jump': function() {
-//     console.log('jumpheard');
-//     if(canJump == true){
-//     character.style.animationName = "jump";
-//         canJump = false;
-//         canDuck = false;
-//         setTimeout(reset, 2100);
-//       }
-//   }
-// };
+    var commands = {
+  'jump': function() {
+    console.log('jumpheard');
+    if(canJump == true){
+    character.style.animationName = "jump";
+        canJump = false;
+        canDuck = false;
+        setTimeout(reset, 2100);
+      }
+  }
+};
 
  var commands2 = {
 
@@ -107,6 +107,7 @@ function reset() {
 
   // Add our commands to annyang
   annyang.addCommands(commands2);
+  annyang.init(commands, false);
     // annyang.addCommands(commands2);
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
