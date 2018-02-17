@@ -53,6 +53,10 @@ if (annyang) {
     var commands = {
   'jump': function() {
     console.log('jumpheard');
+    character.style.animationName = "jump";
+        canJump = false;
+        setTimeout(reset, 2100);
+
   }
 };
 
