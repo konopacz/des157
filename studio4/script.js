@@ -56,7 +56,7 @@ if (annyang) {
     'duck': duck,
   };
 
-  jump() {
+  var jump = function() {
     if (canJump == true) {
       console.log('jumpHead');
       character.style.animationName = "jump";
@@ -65,7 +65,7 @@ if (annyang) {
     }
   }
 
-  duck() {
+  var duck = function() {
 
     if (canDuck == true) {
       console.log('duckHeard');
