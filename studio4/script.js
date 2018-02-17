@@ -57,8 +57,9 @@ if (annyang) {
   };
 
   var jump = function() {
+    console.log('jumpHead');
     if (canJump == true) {
-      console.log('jumpHead');
+
       character.style.animationName = "jump";
       canJump = false;
       setTimeout(reset, 2100);
@@ -66,9 +67,9 @@ if (annyang) {
   }
 
   var duck = function() {
-
+    console.log('duckHeard');
     if (canDuck == true) {
-      console.log('duckHeard');
+
       character.style.animationName = "duck";
       canJump = false;
       canDuck = false;
