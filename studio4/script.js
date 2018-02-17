@@ -23,7 +23,7 @@ function draw() {
   col = mezr.distance(character, enemt);
   if (col < 0.001) {
 
-    alert("You hit the enemy!");
+    // alert("You hit the enemy!");
   }
 
 
@@ -49,33 +49,36 @@ function draw() {
 
 if (annyang) {
   // Let's define our first command. First the text we expect, and then the function it should call
-  var commands = {
-    'jump': jump,
 
-
-    'duck': duck,
-  };
-
-  var jump = function() {
-    console.log('jumpHead');
-    if (canJump == true) {
-
-      character.style.animationName = "jump";
-      canJump = false;
-      setTimeout(reset, 2100);
-    }
+    var commands = {
+  'jump': function() {
+    console.log('jumpheard');
   }
+};
 
-  var duck = function() {
-    console.log('duckHeard');
-    if (canDuck == true) {
 
-      character.style.animationName = "duck";
-      canJump = false;
-      canDuck = false;
-      setTimeout(reset, 2100);
-    }
-  }
+
+
+  // var jump = function() {
+  //   console.log('jumpHead');
+  //   if (canJump == true) {
+  //
+  //     character.style.animationName = "jump";
+  //     canJump = false;
+  //     setTimeout(reset, 2100);
+  //   }
+  // }
+  //
+  // var duck = function() {
+  //   console.log('duckHeard');
+  //   if (canDuck == true) {
+  //
+  //     character.style.animationName = "duck";
+  //     canJump = false;
+  //     canDuck = false;
+  //     setTimeout(reset, 2100);
+  //   }
+  // }
 
   // Add our commands to annyang
   annyang.addCommands(commands);
