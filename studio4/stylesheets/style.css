@@ -40,7 +40,7 @@ body {
   background-color: blue;
   animation-name: null;
   animation-iteration-count: 1;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 
@@ -70,8 +70,8 @@ body {
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
-  animation-duration: 9s;
-  animation-delay: 5s;
+  animation-duration: 10s;
+  animation-delay: 7s;
    animation-play-state: running;
 }
 
