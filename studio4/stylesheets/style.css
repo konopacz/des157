@@ -55,7 +55,7 @@ body {
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
-  animation-duration: 8s;
+  animation-duration: 7s;
   animation-delay: 2s;
    animation-play-state: running;
 }
