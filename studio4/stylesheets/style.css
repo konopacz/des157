@@ -40,7 +40,7 @@ body {
   background-color: blue;
   animation-name: null;
   animation-iteration-count: 1;
-  animation-duration: 2s;
+  animation-duration: 4s;
 }
 
 
@@ -72,6 +72,21 @@ body {
   animation-iteration-count: infinite;
   animation-duration: 8s;
   animation-delay: 10s;
+   animation-play-state: running;
+}
+
+#enemt3 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 450px;
+  right: 3000px;
+  background-color: yellow;
+  animation-timing-function: linear;
+  animation-name: null;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-delay: 20s;
    animation-play-state: running;
 }
 
@@ -111,6 +126,29 @@ body {
   }
   100% {
     right: 1500px;
+  }
+}
+
+@keyframes attack2 {
+  0% {
+    right: -100px;
+    bottom: 450px;
+  }
+  25%{
+    right: 300px;
+    bottom: 50px;
+  }
+  50% {
+    right: 600px;
+    bottom: 450px;
+  }
+  75% {
+    right: 900px;
+    bottom: 450px;
+  }
+  100% {
+    right: 1200px;
+    bottom: 50px;
   }
 }
 

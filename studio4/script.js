@@ -6,10 +6,12 @@ var micLevel;
 var character = document.getElementById('character');
 var enemt = document.getElementById('enemt');
 var enemt2 = document.getElementById('enemt2');
+var enemt3 = document.getElementById('enemt3');
 var canJump = false;
 var canDuck = false;
 var col1;
 var col2;
+var col3;
 var wantsToJump;
 var menu = document.getElementById('menu');
 var tagline = document.getElementById('tagline');
@@ -29,10 +31,12 @@ function draw() {
 
   col1= mezr.distance(character, enemt);
     col2= mezr.distance(character, enemt2);
-  if (col1 < 0.001 || col2 < 0.001) {
+        col3 = mezr.distance(character, enemt3);
+  if (col1 < 0.001 || col2 < 0.001 || col3 < 0.001) {
     character.style.animationName = "death";
     enemt.style.animationPlayState = "paused";
     enemt2.style.animationPlayState = "paused";
+    enemt3.style.animationPlayState = "paused";
     canJump = false;
     canDuck = false;
     setTimeout(gameReset, 2100);
@@ -43,6 +47,7 @@ function draw() {
     character.style.animationName = "null";
     enemt.style.animationName = "null";
     enemt2.style.animationName = "null";
+        enemt3.style.animationName = "null";
     menu.style.display = "block";
     console.log('gameover');
     canJump = false;
@@ -97,11 +102,13 @@ var commands3 = {
  console.log('gamestart');
  enemt.style.animationName = "attack";
  enemt2.style.animationName = "attack";
+  enemt3.style.animationName = "attack2";
      canDuck = true;
      canJump = true;
 menu.style.display = "none";
 enemt.style.animationPlayState = "running";
 enemt2.style.animationPlayState = "running";
+enemt3.style.animationPlayState = "running";
 character.style.animationPlayState = "running";
 }
 };
@@ -112,6 +119,7 @@ var commands4 = {
  console.log('gamepause');
  enemt.style.animationPlayState = "paused";
  enemt2.style.animationPlayState = "paused";
+ enemt3.style.animationPlayState = "paused";
  character.style.animationPlayState = "paused";
      canDuck = false;
      canJump = false;
