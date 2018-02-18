@@ -80,7 +80,7 @@ if (annyang) {
     character.style.animationName = "jump";
         canJump = false;
         canDuck = false;
-        setTimeout(JDreset, 2100);
+        setTimeout(JDreset, 3100);
       }
   }
 };
@@ -92,7 +92,7 @@ if (annyang) {
   character.style.animationName = "duck";
       canDuck = false;
       canJump = false;
-      setTimeout(JDreset, 2100);
+      setTimeout(JDreset, 3100);
 }
 };
 
