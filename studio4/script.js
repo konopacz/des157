@@ -8,7 +8,8 @@ var enemt = document.getElementById('enemt');
 var enemt2 = document.getElementById('enemt2');
 var canJump = false;
 var canDuck = false;
-var col;
+var col1;
+var col2;
 var wantsToJump;
 var menu = document.getElementById('menu');
 
