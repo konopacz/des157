@@ -27,9 +27,13 @@ body {
   display: block;
 }
 
+#controls {
+  display: block;
+}
+
 #character {
   width: 100px;
-  height: 100px;
+  height: 200px;
   position: absolute;
   bottom: 100px;
   left: 100px;
@@ -48,6 +52,7 @@ body {
   position: absolute;
   bottom: 100px;
   background-color: red;
+  animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
   animation-duration: 10s;
@@ -59,13 +64,14 @@ body {
   width: 100px;
   height: 100px;
   position: absolute;
-  bottom: 200px;
+  bottom: 250px;
   right: 3000px;
   background-color: purple;
+  animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
-  animation-duration: 10s;
-  animation-delay: 10s;
+  animation-duration: 8s;
+  animation-delay: 4s;
    animation-play-state: running;
 }
 

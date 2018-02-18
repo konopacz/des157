@@ -12,6 +12,9 @@ var col1;
 var col2;
 var wantsToJump;
 var menu = document.getElementById('menu');
+var tagline = document.getElementById('tagline');
+var menuhead = document.getElementById('menuhead');
+var controls = document.getElementById('controls');
 
 function setup() {
 
@@ -33,6 +36,7 @@ function draw() {
     canJump = false;
     canDuck = false;
     setTimeout(gameReset, 2100);
+
   }
 
   function gameReset() {
@@ -43,6 +47,9 @@ function draw() {
     console.log('gameover');
     canJump = false;
     canDuck = false;
+    menuhead.innerHTML = "Game Over!";
+    tagline.innerHTML = "Say 'start' to try again.";
+    controls.style.display = 'none';
   }
 
 
@@ -109,6 +116,9 @@ var commands4 = {
      canDuck = false;
      canJump = false;
 menu.style.display = "block";
+menuhead.innerHTML = "Game Pause";
+tagline.innerHTML = "Say 'start' to resume the game.";
+controls.style.display = 'block';
 }
 };
 
