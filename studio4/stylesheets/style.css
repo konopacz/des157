@@ -55,7 +55,7 @@ body {
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
-  animation-duration: 7s;
+  animation-duration: 10s;
   animation-delay: 0s;
    animation-play-state: running;
 }
@@ -70,8 +70,8 @@ body {
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
-  animation-duration: 7s;
-  animation-delay: 3s;
+  animation-duration: 10s;
+  animation-delay: 5s;
    animation-play-state: running;
 }
 
@@ -121,7 +121,7 @@ body {
     right: -100px;
   }
   100% {
-    right: 1500px;
+    right: 2000px;
   }
 }
 
