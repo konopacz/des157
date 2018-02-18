@@ -59,6 +59,7 @@ body {
   animation-iteration-count: infinite;
   animation-duration: 5s;
   animation-delay: 1s;
+   animation-play-state: running;
 }
 
 @keyframes jump {

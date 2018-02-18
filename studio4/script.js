@@ -83,6 +83,20 @@ var commands3 = {
      canDuck = true;
      canJump = true;
 menu.style.display = "none";
+enemt.style.animationPlayState = "running";
+character.style.animationPlayState = "running";
+}
+};
+
+var commands4 = {
+
+'pause': function() {
+ console.log('gamepause');
+ enemt.style.animationPlayState = "paused";
+ character.style.animationPlayState = "paused";
+     canDuck = false;
+     canJump = false;
+menu.style.display = "block";
 }
 };
 
