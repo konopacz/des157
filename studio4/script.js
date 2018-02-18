@@ -80,7 +80,7 @@ if (annyang) {
     character.style.animationName = "jump";
         canJump = false;
         canDuck = false;
-        enemt.style.animationDelay = "5s";
+
         setTimeout(JDreset, 3100);
       }
   }
@@ -111,6 +111,7 @@ enemt.style.animationPlayState = "running";
 enemt2.style.animationPlayState = "running";
 enemt3.style.animationPlayState = "running";
 character.style.animationPlayState = "running";
+setTimeout(delayOn, 7000);
 }
 };
 
@@ -139,8 +140,9 @@ function JDreset() {
   canJump = true;
   canDuck = true;
 }
-
-
+function delayOn() {
+enemt.style.animationDelay = "5s";
+}
 
   // Add our commands to annyang
     annyang.addCommands(commands4);
