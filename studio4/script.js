@@ -80,6 +80,7 @@ if (annyang) {
     character.style.animationName = "jump";
         canJump = false;
         canDuck = false;
+        enemt.style.animationDelay = "5s";
         setTimeout(JDreset, 3100);
       }
   }
