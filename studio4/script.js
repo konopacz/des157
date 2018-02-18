@@ -5,10 +5,11 @@ var amplitude;
 var micLevel;
 var character = document.getElementById('character');
 var enemt = document.getElementById('enemt');
-var canJump = true;
-var canDuck = true;
+var canJump = false;
+var canDuck = false;
 var col;
 var wantsToJump;
+var menu = document.getElementById('menu');
 
 function setup() {
 
@@ -36,7 +37,7 @@ function draw() {
   //   setTimeout(resetjump, 2100);
   // }
 
-  function reset() {
+  function JDreset() {
     character.style.animationName = "null";
     console.log('jumpreset');
     canJump = true;
@@ -58,7 +59,7 @@ if (annyang) {
     character.style.animationName = "jump";
         canJump = false;
         canDuck = false;
-        setTimeout(reset, 2100);
+        setTimeout(JDreset, 2100);
       }
   }
 };
@@ -70,11 +71,24 @@ if (annyang) {
   character.style.animationName = "duck";
       canDuck = false;
       canJump = false;
-      setTimeout(reset, 2100);
+      setTimeout(JDreset, 2100);
 }
 };
 
-function reset() {
+var commands3 = {
+
+'start': function() {
+ console.log('gamestart');
+ enemt.style.animationName = "attack";
+     canDuck = true;
+     canJump = true;
+menu.style.display = "none";
+}
+};
+
+
+
+function JDreset() {
   character.style.animationName = "null";
   console.log('jumpreset');
   canJump = true;
@@ -106,6 +120,7 @@ function reset() {
   // }
 
   // Add our commands to annyang
+  annyang.addCommands(commands3);
   annyang.addCommands(commands2);
   annyang.addCommands(commands);
     // annyang.addCommands(commands2);
