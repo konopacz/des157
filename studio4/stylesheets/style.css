@@ -39,7 +39,7 @@ body {
   animation-duration: 2s;
 }
 
-#test {
+#enemt2 {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -59,6 +59,20 @@ body {
   animation-iteration-count: infinite;
   animation-duration: 5s;
   animation-delay: 1s;
+   animation-play-state: running;
+}
+
+#enemt2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 200px;
+  right: 100px;
+  background-color: purple;
+  animation-name: null;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 3s;
    animation-play-state: running;
 }
 
@@ -97,16 +111,12 @@ body {
 
 @keyframes death {
 0% {
-  bottom: 100px;
-  left: 100px;
+  transform: rotate(0deg);
+
 }
-  50% {
-    bottom: 200px;
-    left: 80px;
-  }
+
 100%{
-  bottom: -500px;
-  left: 0px;
+transform: rotate(359deg);
 }
 
 }

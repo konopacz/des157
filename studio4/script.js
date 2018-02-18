@@ -5,6 +5,7 @@ var amplitude;
 var micLevel;
 var character = document.getElementById('character');
 var enemt = document.getElementById('enemt');
+var enemt2 = document.getElementById('enemt2');
 var canJump = false;
 var canDuck = false;
 var col;
@@ -22,10 +23,12 @@ function setup() {
 
 function draw() {
 
-  col = mezr.distance(character, enemt);
-  if (col < 0.001) {
+  col1= mezr.distance(character, enemt);
+    col2= mezr.distance(character, enemt2);
+  if (col1 < 0.001 || col2 < 0.001) {
     character.style.animationName = "death";
     enemt.style.animationPlayState = "paused";
+    enemt2.style.animationPlayState = "paused";
     canJump = false;
     canDuck = false;
     setTimeout(gameReset, 2100);
@@ -34,6 +37,7 @@ function draw() {
   function gameReset() {
     character.style.animationName = "null";
     enemt.style.animationName = "null";
+    enemt2.style.animationName = "null";
     menu.style.display = "block";
     console.log('gameover');
     canJump = false;
@@ -84,10 +88,12 @@ var commands3 = {
 'start': function() {
  console.log('gamestart');
  enemt.style.animationName = "attack";
+ enemt2.style.animationName = "attack";
      canDuck = true;
      canJump = true;
 menu.style.display = "none";
 enemt.style.animationPlayState = "running";
+enemt2.style.animationPlayState = "running";
 character.style.animationPlayState = "running";
 }
 };
@@ -97,6 +103,7 @@ var commands4 = {
 'pause': function() {
  console.log('gamepause');
  enemt.style.animationPlayState = "paused";
+ enemt2.style.animationPlayState = "paused";
  character.style.animationPlayState = "paused";
      canDuck = false;
      canJump = false;
