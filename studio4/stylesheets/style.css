@@ -70,8 +70,8 @@ body {
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
-  animation-duration: 8s;
-  animation-delay: 10s;
+  animation-duration: 9s;
+  animation-delay: 5s;
    animation-play-state: running;
 }
 
