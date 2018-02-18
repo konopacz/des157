@@ -71,7 +71,7 @@ body {
   animation-name: null;
   animation-iteration-count: infinite;
   animation-duration: 10s;
-  animation-delay: 7s;
+  animation-delay: 8s;
    animation-play-state: running;
 }
 
@@ -95,13 +95,13 @@ body {
     bottom: 100px;
   }
   30% {
-    bottom: 500px;
+    bottom: 300px;
   }
   70% {
-    bottom: 510px;
+    bottom: 410px;
   }
   80% {
-    bottom: 500px;
+    bottom: 300px;
   }
   100% {
     bottom: 100px;
