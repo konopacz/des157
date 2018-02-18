@@ -134,6 +134,7 @@ function JDreset() {
   // }
 
   // Add our commands to annyang
+    annyang.addCommands(commands4);
   annyang.addCommands(commands3);
   annyang.addCommands(commands2);
   annyang.addCommands(commands);
