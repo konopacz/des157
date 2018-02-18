@@ -24,18 +24,22 @@ function draw() {
 
   col = mezr.distance(character, enemt);
   if (col < 0.001) {
-
-    // alert("You hit the enemy!");
+    character.style.animationName = "death";
+    enemt.style.animationPlayState = "paused";
+    canJump = false;
+    canDuck = false;
+    setTimeout(gameReset, 2100);
   }
 
+  function gameReset() {
+    character.style.animationName = "null";
+    enemt.style.animationName = "null";
+    menu.style.display = "block";
+    console.log('gameover');
+    canJump = false;
+    canDuck = false;
+  }
 
-  // micLevel = mic.getLevel();
-  // if (micLevel > 0.07 && canJump == true) {
-  //   console.log('jumping');
-  //   character.style.animationName = "jump";
-  //   canJump = false;
-  //   setTimeout(resetjump, 2100);
-  // }
 
   function JDreset() {
     character.style.animationName = "null";
@@ -110,28 +114,6 @@ function JDreset() {
 }
 
 
-
-
-  // var jump = function() {
-  //   console.log('jumpHead');
-  //   if (canJump == true) {
-  //
-  //     character.style.animationName = "jump";
-  //     canJump = false;
-  //     setTimeout(reset, 2100);
-  //   }
-  // }
-  //
-  // var duck = function() {
-  //   console.log('duckHeard');
-  //   if (canDuck == true) {
-  //
-  //     character.style.animationName = "duck";
-  //     canJump = false;
-  //     canDuck = false;
-  //     setTimeout(reset, 2100);
-  //   }
-  // }
 
   // Add our commands to annyang
     annyang.addCommands(commands4);
