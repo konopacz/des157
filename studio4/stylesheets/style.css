@@ -239,8 +239,13 @@ span {
 }
 
 footer {
-color: white;
+
 width: 70%;
-text-align: center;
-text-decoration: none;
+display: inline-block;
+
+}
+footer p {
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
