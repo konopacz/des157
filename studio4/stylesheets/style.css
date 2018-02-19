@@ -91,6 +91,10 @@ span {
   text-align: center;
 }
 
+#menuimage {
+  display: none;
+}
+
 #menu img {
   width: 200px;
   height: auto;
