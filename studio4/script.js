@@ -18,6 +18,8 @@ var tagline = document.getElementById('tagline');
 var menuhead = document.getElementById('menuhead');
 var controls = document.getElementById('controls');
 
+var cSprite = document.getElementById('cSprite');
+
 function setup() {
 
 
@@ -106,6 +108,9 @@ var commands3 = {
   enemt3.style.animationName = "attack2";
      canDuck = true;
      canJump = true;
+
+cSprite.src = "images/runbowl.gif";
+
 menu.style.display = "none";
 enemt.style.animationPlayState = "running";
 enemt2.style.animationPlayState = "running";
