@@ -157,6 +157,7 @@ if (annyang) {
       canDuck = false;
       canJump = false;
       menu.style.display = "block";
+      scroller.style.display = "none";
       menuhead.innerHTML = "Game Pause";
       tagline.innerHTML = "Say 'start' to resume the game.";
       controls.style.display = 'block';
