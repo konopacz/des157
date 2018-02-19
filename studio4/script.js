@@ -25,6 +25,7 @@ var scroller = document.getElementById('scroller');
 var scazhitbox = document.getElementById('scazhitbox');
 var breadhitbox = document.getElementById('breadhitbox');
 var bikehitbox = document.getElementById('bikehitbox');
+var leffhitbox = document.getElementById('leffhitbox');
 
 function setup() {
 
@@ -37,9 +38,9 @@ function setup() {
 
 function draw() {
 
-  col1 = mezr.distance(character, scazhitbox);
-  col2 = mezr.distance(character, breadhitbox);
-  col3 = mezr.distance(character, bikehitbox);
+  col1 = mezr.distance(leffhitbox, scazhitbox);
+  col2 = mezr.distance(leffhitbox, breadhitbox);
+  col3 = mezr.distance(leffhitbox, bikehitbox);
 
   if (col1 < 0.001 || col2 < 0.001 || col3 < 0.001) {
 

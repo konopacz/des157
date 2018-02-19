@@ -173,7 +173,7 @@ span {
    animation-play-state: running;
 }
 
-#scazhitbox, #breadhitbox, #bikehitbox {
+#scazhitbox, #breadhitbox, #bikehitbox, #leffhitbox {
   background-color: red;
   opacity: 0.5;
   position: relative;
