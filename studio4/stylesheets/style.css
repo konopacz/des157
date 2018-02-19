@@ -13,7 +13,7 @@ body {
   margin-top: 10px;
   background-color: white;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0px;
 }
 
@@ -27,10 +27,11 @@ body {
     animation-iteration-count: infinite;
 }
 
-.scroller img {
+#scroller {
   height: 700px;
   width: 4000px;
   z-index: 0;
+  display: none;
 }
  .enemy {
    width: 120%;

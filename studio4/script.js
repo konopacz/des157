@@ -19,6 +19,7 @@ var menuhead = document.getElementById('menuhead');
 var controls = document.getElementById('controls');
 
 var cSprite = document.getElementById('cSprite');
+var scroller = document.getElementById('scroller');
 
 function setup() {
 
@@ -37,22 +38,27 @@ function draw() {
 
   if (col1 < 0.001 || col2 < 0.001 || col3 < 0.001) {
 
-    character.style.animationPlayState = "paused";
-    enemt.style.animationPlayState = "paused";
-    enemt2.style.animationPlayState = "paused";
-    enemt3.style.animationPlayState = "paused";
-    canJump = false;
-    canDuck = false;
-cSprite.src = "images/deadbowl.gif";
-    setTimeout(gameReset, 2100);
+death();
 
   }
+
+function death(){
+  character.style.animationPlayState = "paused";
+  enemt.style.animationPlayState = "paused";
+  enemt2.style.animationPlayState = "paused";
+  enemt3.style.animationPlayState = "paused";
+  canJump = false;
+  canDuck = false;
+cSprite.src = "images/deadbowl.gif";
+  setTimeout(gameReset, 2100);
+}
 
   function gameReset() {
     character.style.animationName = "null";
     enemt.style.animationName = "null";
     enemt2.style.animationName = "null";
     enemt3.style.animationName = "null";
+    scroller.style.dispaly = "none";
     menu.style.display = "block";
     console.log('gameover');
     canJump = false;
@@ -120,6 +126,7 @@ var commands3 = {
 cSprite.src = "images/runbowl.gif";
 
 menu.style.display = "none";
+scroller.style.dispaly = "block";
 enemt.style.animationPlayState = "running";
 enemt2.style.animationPlayState = "running";
 enemt3.style.animationPlayState = "running";
