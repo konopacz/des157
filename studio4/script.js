@@ -150,6 +150,7 @@ controls.style.display = 'block';
 function JDreset() {
   character.style.animationName = "null";
   console.log('jumpreset');
+  cSprite.src = "images/runbowl.gif";
   canJump = true;
   canDuck = true;
 }
