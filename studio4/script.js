@@ -139,6 +139,7 @@ if (annyang) {
       enemt.style.animationPlayState = "running";
       enemt2.style.animationPlayState = "running";
       enemt3.style.animationPlayState = "running";
+      scroller.style.animationPlayState = "running";
       character.style.animationPlayState = "running";
 
     }
@@ -151,6 +152,7 @@ if (annyang) {
       enemt.style.animationPlayState = "paused";
       enemt2.style.animationPlayState = "paused";
       enemt3.style.animationPlayState = "paused";
+      scroller.style.animationPlayState = "paused";
       character.style.animationPlayState = "paused";
       canDuck = false;
       canJump = false;
