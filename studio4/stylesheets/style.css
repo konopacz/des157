@@ -130,6 +130,7 @@ span {
   height: 100px;
   right: -100px;
   position: absolute;
+  text-align: center;
   bottom: 80px;
   /* background-color: red; */
   animation-timing-function: linear;
@@ -146,6 +147,7 @@ span {
   position: absolute;
   bottom: 200px;
   right: 3000px;
+  text-align: center;
   /* background-color: purple; */
   animation-timing-function: linear;
   animation-name: null;
@@ -161,6 +163,7 @@ span {
   position: absolute;
   bottom: 450px;
   right: 3000px;
+  text-align: center;
   /* background-color: yellow; */
   animation-timing-function: linear;
   animation-name: null;
@@ -168,6 +171,16 @@ span {
   animation-duration: 10s;
   animation-delay: 20s;
    animation-play-state: running;
+}
+
+#scazhitbox, #breadhitbox, #bikehitbox {
+  background-color: red;
+  opacity: 0.5;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
 }
 
 @keyframes jump {

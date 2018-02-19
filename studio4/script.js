@@ -22,7 +22,9 @@ var menuimage = document.getElementById('menuimage');
 var cSprite = document.getElementById('cSprite');
 var scroller = document.getElementById('scroller');
 
-
+var scazhitbox = document.getElementById('scazhitbox');
+var breadhitbox = document.getElementById('breadhitbox');
+var bikehitbox = document.getElementById('bikehitbox');
 
 function setup() {
 
