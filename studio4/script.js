@@ -58,7 +58,7 @@ cSprite.src = "images/deadbowl.gif";
     enemt.style.animationName = "null";
     enemt2.style.animationName = "null";
     enemt3.style.animationName = "null";
-    scroller.style.dispaly = "none";
+    scroller.style.display = "none";
     menu.style.display = "block";
     console.log('gameover');
     canJump = false;
@@ -126,7 +126,7 @@ var commands3 = {
 cSprite.src = "images/runbowl.gif";
 
 menu.style.display = "none";
-scroller.style.dispaly = "block";
+scroller.style.display = "block";
 enemt.style.animationPlayState = "running";
 enemt2.style.animationPlayState = "running";
 enemt3.style.animationPlayState = "running";
