@@ -96,7 +96,8 @@ span {
 
 #menuimage {
   display: none;
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #menu img {
@@ -242,9 +243,10 @@ footer {
 
 width: 70%;
 display: inline-block;
-
+margin-left: auto;
+margin-right: auto;
 }
-footer p {
+footer p a{
   text-align: center;
   text-decoration: none;
   color: white;
