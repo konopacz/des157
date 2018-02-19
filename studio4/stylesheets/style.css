@@ -13,6 +13,22 @@ body {
   background-color: white;
   position: relative;
   overflow-x: hidden;
+  padding: 0px;
+}
+
+.scroller{
+  position: relative;
+    top: 0px;
+    left: 0px;
+    animation-name: scrolling;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller img {
+  height: 700px;
+  width: 4000px;
 }
  .enemy {
    width: 120%;
@@ -46,7 +62,7 @@ body {
   text-align: center;
   bottom: 100px;
   left: 100px;
-  background-color: blue;
+  /* background-color: blue; */
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: 1;
@@ -61,7 +77,7 @@ body {
   right: -100px;
   position: absolute;
   bottom: 100px;
-  background-color: red;
+  /* background-color: red; */
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
@@ -76,7 +92,7 @@ body {
   position: absolute;
   bottom: 250px;
   right: 3000px;
-  background-color: purple;
+  /* background-color: purple; */
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
@@ -91,7 +107,7 @@ body {
   position: absolute;
   bottom: 450px;
   right: 3000px;
-  background-color: yellow;
+  /* background-color: yellow; */
   animation-timing-function: linear;
   animation-name: null;
   animation-iteration-count: infinite;
@@ -167,5 +183,15 @@ body {
 100%{
 transform: rotate(359deg);
 }
+
+}
+
+@keyframes scrolling {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -4000px;
+  }
 
 }

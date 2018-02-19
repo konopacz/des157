@@ -36,14 +36,14 @@ function draw() {
         col3 = mezr.distance(character, enemt3);
 
   if (col1 < 0.001 || col2 < 0.001 || col3 < 0.001) {
-cSprite.src = "images/deadbowl.gif";
+
     character.style.animationPlayState = "paused";
     enemt.style.animationPlayState = "paused";
     enemt2.style.animationPlayState = "paused";
     enemt3.style.animationPlayState = "paused";
     canJump = false;
     canDuck = false;
-
+cSprite.src = "images/deadbowl.gif";
     setTimeout(gameReset, 2100);
 
   }
