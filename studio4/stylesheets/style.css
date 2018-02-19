@@ -14,6 +14,14 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+ .enemy {
+   width: 120%;
+   position: relative;
+ }
+#cSprite {
+  width: 120%;
+  position: relative;
+}
 
 #menu {
   position: absolute;
@@ -32,9 +40,10 @@ body {
 }
 
 #character {
-  width: 100px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
+  text-align: center;
   bottom: 100px;
   left: 100px;
   background-color: blue;
