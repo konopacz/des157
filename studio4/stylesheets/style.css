@@ -56,7 +56,7 @@ span {
   position: relative;
     top: 0px;
     left: 0px;
-    animation-name: scrolling;
+    animation-name: null;
     animation-duration: 200s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -104,7 +104,7 @@ span {
   height: 150px;
   position: absolute;
   text-align: center;
-  bottom: 100px;
+  bottom: 80px;
   left: 100px;
   z-index: 1;
   /* background-color: blue; */
@@ -121,7 +121,7 @@ span {
   height: 100px;
   right: -100px;
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   /* background-color: red; */
   animation-timing-function: linear;
   animation-name: null;
@@ -135,7 +135,7 @@ span {
   width: 100px;
   height: 100px;
   position: absolute;
-  bottom: 250px;
+  bottom: 210px;
   right: 3000px;
   /* background-color: purple; */
   animation-timing-function: linear;
@@ -163,7 +163,7 @@ span {
 
 @keyframes jump {
   0% {
-    bottom: 100px;
+    bottom: 80px;
   }
 
   50% {
@@ -171,7 +171,7 @@ span {
   }
 
   100% {
-    bottom: 100px;
+    bottom: 80px;
   }
 }
 
@@ -219,17 +219,6 @@ span {
   }
 }
 
-@keyframes death {
-0% {
-  transform: rotate(0deg);
-
-}
-
-100%{
-transform: rotate(359deg);
-}
-
-}
 
 @keyframes scrolling {
   0% {
