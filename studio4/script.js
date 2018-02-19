@@ -34,13 +34,15 @@ function draw() {
   col1= mezr.distance(character, enemt);
     col2= mezr.distance(character, enemt2);
         col3 = mezr.distance(character, enemt3);
+
   if (col1 < 0.001 || col2 < 0.001 || col3 < 0.001) {
-    character.style.animationName = "death";
+    character.style.animationPlayState = "paused";
     enemt.style.animationPlayState = "paused";
     enemt2.style.animationPlayState = "paused";
     enemt3.style.animationPlayState = "paused";
     canJump = false;
     canDuck = false;
+    cSprite.src = "images/deadbowl.gif";
     setTimeout(gameReset, 2100);
 
   }
@@ -49,7 +51,7 @@ function draw() {
     character.style.animationName = "null";
     enemt.style.animationName = "null";
     enemt2.style.animationName = "null";
-        enemt3.style.animationName = "null";
+    enemt3.style.animationName = "null";
     menu.style.display = "block";
     console.log('gameover');
     canJump = false;
@@ -62,6 +64,7 @@ function draw() {
 
   function JDreset() {
     character.style.animationName = "null";
+    cSprite.src = "images/runbowl.gif";
     console.log('jumpreset');
     canJump = true;
     canDuck = true;
@@ -80,6 +83,7 @@ if (annyang) {
     console.log('jumpheard');
     if(canJump == true){
     character.style.animationName = "jump";
+    cSprite.src = "images/jumpbowl.gif";
         canJump = false;
         canDuck = false;
 
@@ -93,6 +97,7 @@ if (annyang) {
 'duck': function() {
   console.log('duckheard');
   character.style.animationName = "duck";
+  cSprite.src = "images/rollingbowl.gif";
       canDuck = false;
       canJump = false;
       setTimeout(JDreset, 3100);
