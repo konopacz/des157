@@ -117,7 +117,7 @@ span {
   left: 100px;
   z-index: 1;
   /* background-color: blue; */
-  animation-timing-function: linear;
+  animation-timing-function: ease-in;
   animation-name: null;
   animation-iteration-count: 1;
   animation-duration: 3s;
@@ -142,9 +142,9 @@ span {
 
 #enemt2 {
   width: 100px;
-  height: 100px;
+  height: 50px;
   position: absolute;
-  bottom: 210px;
+  bottom: 120px;
   right: 3000px;
   /* background-color: purple; */
   animation-timing-function: linear;
@@ -241,10 +241,13 @@ span {
 
 footer {
 
-width: 70%;
+
 display: inline-block;
 margin-left: auto;
 margin-right: auto;
+max-width: 90%;
+width: 90%;
+margin: auto;
 }
 footer p a{
   text-align: center;
