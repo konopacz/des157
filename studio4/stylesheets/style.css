@@ -61,14 +61,15 @@ span {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-play-state: paused;
+    z-index: 0;
+    opacity: 0.7;
+    display: none;
 }
 
 .scrollimg {
   height: 700px;
   width: 4000px;
-  z-index: 0;
-  opacity: 0.7;
-  display: none;
+
 
 }
  .enemy {
