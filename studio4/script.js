@@ -37,9 +37,9 @@ function setup() {
 
 function draw() {
 
-  col1 = mezr.distance(character, enemt);
-  col2 = mezr.distance(character, enemt2);
-  col3 = mezr.distance(character, enemt3);
+  col1 = mezr.distance(character, scazhitbox);
+  col2 = mezr.distance(character, breadhitbox);
+  col3 = mezr.distance(character, bikehitbox);
 
   if (col1 < 0.001 || col2 < 0.001 || col3 < 0.001) {
 
