@@ -67,7 +67,7 @@ span {
 }
 
 .scrollimg {
-  height: 700px;
+  height: 730px;
   width: 4000px;
 
 
@@ -144,7 +144,7 @@ span {
   width: 100px;
   height: 50px;
   position: absolute;
-  bottom: 120px;
+  bottom: 200px;
   right: 3000px;
   /* background-color: purple; */
   animation-timing-function: linear;
