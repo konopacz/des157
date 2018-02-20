@@ -38,6 +38,8 @@ function setup() {
 
 function draw() {
 
+  var micLevel = mic.getLevel();
+
   col1 = mezr.distance(leffhitbox, scazhitbox);
   col2 = mezr.distance(leffhitbox, breadhitbox);
   col3 = mezr.distance(leffhitbox, bikehitbox);
@@ -56,6 +58,7 @@ function draw() {
     canJump = false;
     canDuck = false;
     cSprite.src = "images/deadbowl.gif";
+
     setTimeout(gameReset, 2100);
   }
 
@@ -74,6 +77,7 @@ function draw() {
     tagline.innerHTML = "Say 'start' to try again.";
     controls.style.display = 'none';
     menuimage.style.display = 'block';
+    menuimage.src = "images/deadbowl.gif";
   }
 
 

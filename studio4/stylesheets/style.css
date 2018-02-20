@@ -19,6 +19,17 @@ h2{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+img.mic {
+  width: 100px;
+}
+h3{
+  font-family: 'Fjalla One', sans-serif;
+  color: black;
+  font-size: 36px;
+  font-variant: small-caps;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 li, p {
   font-family: 'Press Start 2P', cursive;
   color: black;
@@ -31,7 +42,24 @@ span {
   color: black;
   font-size: 16px;
   margin-bottom: 5px;
+  bottom: -60px;
   list-style: none;
+  position: relative;
+}
+
+strong {
+  font-size: 14px;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 #menuhead {
@@ -95,17 +123,24 @@ span {
 }
 
 #menuimage {
-  display: none;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 200px;
+  height: auto;
 }
 
-#menu img {
-  width: 200px;
+#menuimage img {
+  width: 150px;
   height: auto;
 }
 #controls {
   display: block;
+
+}
+
+#controls li {
+  text-align: left;
 }
 
 #character {
