@@ -18,6 +18,7 @@ var tagline = document.getElementById('tagline');
 var menuhead = document.getElementById('menuhead');
 var controls = document.getElementById('controls');
 var menuimage = document.getElementById('menuimage');
+var miccolumn= document.getElementById('miccolumn');
 
 var cSprite = document.getElementById('cSprite');
 var scroller = document.getElementById('scroller');
@@ -75,6 +76,7 @@ function draw() {
     canDuck = false;
     menuhead.innerHTML = "Game Over!";
     tagline.innerHTML = "Say 'start' to try again.";
+    miccolumn.style.display = 'none';
     controls.style.display = 'none';
     menuimage.style.display = 'block';
     menuimage.src = "images/deadbowl.gif";
@@ -168,6 +170,7 @@ if (annyang) {
       menuhead.innerHTML = "Game Pause";
       tagline.innerHTML = "Say 'start' to resume the game.";
       controls.style.display = 'block';
+      miccolumn.style.display = 'block';
     }
   };
 

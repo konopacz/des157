@@ -138,6 +138,9 @@ strong {
   display: block;
 
 }
+#miccolumn {
+  display: block;
+}
 
 #controls li {
   text-align: left;
