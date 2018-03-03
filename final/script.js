@@ -199,6 +199,9 @@ function initMap() {
       ]
     }
   });
+
+
+
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
 
@@ -206,14 +209,21 @@ function initMap() {
   // currentlocationstuff
 
   var infoWindow;
+  var pos;
+  var marker = new google.maps.Marker;
+
+  var test = new google.maps.LatLng(38.538411, -34.896872);
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
+    navigator.geolocation.watchPosition(function(position) {
+      pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
 
 
+      marker.setPosition(pos);
+
+      marker.setMap(map);
       map.setCenter(pos);
       map.setZoom(20);
 
@@ -224,6 +234,15 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
+
+  var marker = new google.maps.Marker({
+   position: pos,
+   map: map,
+   title: 'Hello World!'
+ });
+
+
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
