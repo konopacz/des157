@@ -181,6 +181,8 @@ function initMap() {
 
   // Create a map object, and include the MapTypeId to add
   // to the map type control.
+  var mapbox = document.getElementById('map');
+  var arView = document.getElementById('arView');
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: 38.5547,
@@ -226,6 +228,12 @@ function initMap() {
       marker.setMap(map);
       map.setCenter(pos);
       map.setZoom(20);
+
+      marker.addListener('click', function() {
+                mapbox.style.display = "none";
+                arView.style.display = "block";
+              });
+
 
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());

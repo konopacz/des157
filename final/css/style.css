@@ -26,6 +26,16 @@ body {
   margin: 0px;
 }
 
+#arView {
+  max-width: 100%;
+  height: 80%;
+  background-color: crimson;
+  display: none;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+
 .hud {
   max-width: 100%;
   display: block;
