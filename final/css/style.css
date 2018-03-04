@@ -14,6 +14,7 @@ body {
   position: absolute;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+  overflow-x: hidden;
 }
 
 #map {
@@ -34,6 +35,7 @@ body {
   position: relative;
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
 }
 
 .hud {
