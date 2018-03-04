@@ -257,112 +257,13 @@ function initMap() {
  });
 
 
+ function handleLocationError(browserHasGeolocation, marker, pos) {
+   marker.setPosition(pos);
+   marker.setContent(browserHasGeolocation ?
+     'Error: The Geolocation service failed.' :
+     'Error: Your browser doesn\'t support geolocation.');
+   marker.open(map);
+
+ }
+
 }
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-    'Error: The Geolocation service failed.' :
-    'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
-
-}
-
-
-
-
-
-
-(function() {
-
-var config = {
-   apiKey: "AIzaSyABOlfZiT0ybpXRfstbgKh5bQgKX91406A",
-   authDomain: "laatsmapproject.firebaseapp.com",
-   databaseURL: "https://laatsmapproject.firebaseio.com",
-   projectId: "laatsmapproject",
-   storageBucket: "laatsmapproject.appspot.com",
-   messagingSenderId: "160734334282"
- };
- firebase.initializeApp(config);
-
-const txtEmail = document.getElementById('txtEmail');
-const txtPassword = document.getElementById('txtPassword');
-const txtName = document.getElementById('txtName');
-const btnLogin = document.getElementById('btnLogin');
-const btnSignUp = document.getElementById('btnSignUp');
-const btnLogout = document.getElementById('btnLogout');
-
-var scoreField = document.getElementById('scoreField');
-var score;
-var userName;
-var name = document.getElementById('namefield');
-
-//Add btnLogin
-btnLogin.addEventListener('click', e => {
-
-  const email = txtEmail.value;
-  const pass = txtPassword.value;
-  const auth = firebase.auth();
-
-  const promise = auth.signInWithEmailAndPassword(email, pass);
-  promise.catch(e => console.log(e.message));
-});
-
-
-
-btnSignUp.addEventListener('click', e=> {
-
-
-  const email = txtEmail.value;
-  const pass = txtPassword.value;
-  const auth = firebase.auth();
-
-  const promise = auth.createUserWithEmailAndPassword(email, pass);
-
-  promise.catch(e => console.log(e.message));
-
-});
-
-
-
-btnLogout.addEventListener('click', e => {
-  firebase.auth().signOut();
-});
-
-
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if(user){
-    console.log(user);
-mapbox.style.display = 'block';
-hud.style.display = 'block';
-account1.style.display = 'none';
-// add user info
-
-    user.updateProfile({
-   displayName: txtName.value,
-   photoURL: txtName.value
-
-
-  }).then(function() {
-    userName = user.displayName;
-    score = user.photoURL;
-    scoreField.innerHTML = userName + "'s score is " + score + "!";
-  namefield.innerHTML = userName;
-  }).catch(function(error) {
-  // An error happened.
-  });
-
-
-
-
-    btnLogout.classList.remove('hide');
-  }else{
-    console.log('not logged in');
-      btnLogout.classList.add('hide');
-  }
-
-});
-
-
-}());
