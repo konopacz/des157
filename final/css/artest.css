@@ -1,20 +1,23 @@
-/* body {
-width: 100% !important;
-margin-left: 0px !important;
-margin-right: 0px !important;
-margin-top: 0px !important;
-height: 100% !important;
-overflow: hidden;
+body {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
 }
+body { margin: 0; }
 
-video{
-  width: 100% !important;
-  position: relative !important;
-  height: 80% !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+ video {
+   display: none;
+ }
+
+ canvas{
+   display: block;
+ }
+#webcam {
+ height: 80%;
+ width: auto;
+ margin-left: 50%;
+ transform: translateX(-50%);
+ z-index: -100;
+ position: absolute;
+ overflow: hidden;
 }
-
-#arjsDebugUIContainer {
-  display: none;
-} */

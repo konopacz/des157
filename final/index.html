@@ -15,28 +15,55 @@
 
 <body>
 
+  <div id='createAccount'>
+  <input id="txtName" type="displayName" placeholder="Display Name">
+  <input id="txtEmail" type="email" placeholder="Email">
+
+  <input id="txtPassword" type="password" placeholder="Password">
+
+
+<button id="btnLogin">Log In</button>
+<button id="btnSignUp">Sign Up</button>
+
+
+<h1 id="scoreField">Person's score is null</h1>
+
+  </div>
+
+
 
   <div id='map'>
 
   </div>
 
-  <div disabled id='arView'>
-  
+  <div id='webcam'>
+
   </div>
 
-
-  <div class='hud'>
-
+  <main>
+  </main>
+  <div id='hud'>
+    <button id="btnLogout" class='hide'>Log Out</button>
+<h2 id="namefield"></h2>
     <div class='menubtn'>
     </div>
 
   </div>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUQ0uayxafuA8TTMRFmKpygY3NY2ZEHFI&callback=initMap"
     async defer></script>
-    <script src="script.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/ar.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/script.js"></script>
   </body>
-</body>
+
 
 
 
