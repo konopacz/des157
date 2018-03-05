@@ -15,22 +15,31 @@
 
 <body>
 
-  <div id='createAccount'>
-  <input id="txtName" type="displayName" placeholder="Display Name">
-  <input id="txtEmail" type="email" placeholder="Email">
+  <div id='accountStuff'>
 
-  <input id="txtPassword" type="password" placeholder="Password">
-
-
-<button id="btnLogin">Log In</button>
-<button id="btnSignUp">Sign Up</button>
-<button id="btnLogout">Log Out</button>
+    <h1 id="newAccountbtn">New Account</h1>
+    <h1 id="rtrnAccountbtn">Returning Player</h1>
 
 
-<h1 id="scoreField">Person's score is null</h1>
+  <input id="txtName" class="hide" type="displayName" placeholder="Display Name">
+  <input id="txtEmail" class="hide" type="email" placeholder="Email">
 
-  </div>
+  <input id="txtPassword" class="hide" type="password" placeholder="Password">
+<button id="btnSignUp" class="hide">Sign Up</button>
 
+
+
+<button id="btnLogin" class="hide">Log In</button>
+
+
+
+<h1 id="backBtn" class='hide'>Back</h2>
+
+  <h1 id="scoreField" class="hide">Person's score is null</h1>
+
+    <button id="btnLogout" class="hide">Log Out</button>
+
+</div>
 
 
   <div id='map'>
@@ -39,18 +48,21 @@
 
   <div id='webcam'>
 
+<div id="tapTarget">
+
+</div>
+
   </div>
 
-  <main>
-  </main>
+
   <div id='hud'>
 
 
 <h2 id="namefield"></h2>
     <div class='menubtn'>
     </div>
-
-
+<button id="backtomenu">Menu</button>
+<button id="backtomap" class="hide">Back to Map</button>
 
   </div>
 

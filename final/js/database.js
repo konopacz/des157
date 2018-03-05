@@ -2,7 +2,12 @@ var mapbox = document.getElementById('map');
 var webcam = document.getElementById('webcam');
 var hud = document.getElementById('hud');
 var canva = document.getElementsByTagName('canvas');
-var account1 = document.getElementById('createAccount');
+var account1 = document.getElementById('accountStuff');
+var newAccountbtn = document.getElementById('newAccountbtn');
+var rtrnAccountbtn = document.getElementById('rtrnAccountbtn');
+var backBtn = document.getElementById('backBtn');
+var backtomenu = document.getElementById('backtomenu');
+var backtomap = document.getElementById('backtomap');
 
 
 (function() {
@@ -23,6 +28,7 @@ const txtName = document.getElementById('txtName');
 const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
+const tapTarget = document.getElementById('tapTarget');
 
 
 var scoreField = document.getElementById('scoreField');
@@ -74,7 +80,7 @@ btnSignUp.addEventListener('click', e=> {
       user.updateProfile({
 
       displayName: txtName.value,
-      photoURL: txtName.value
+      
 
       }).then(function() {
       userName = user.displayName;
@@ -89,6 +95,15 @@ btnSignUp.addEventListener('click', e=> {
     }
   });
 
+
+  txtName.classList.add("hide");
+  txtEmail.classList.add("hide");
+  txtPassword.classList.add("hide");
+  btnSignUp.classList.add("hide");
+  rtrnAccountbtn.classList.add("hide");
+  backBtn.classList.add("hide");
+  btnLogout.classList.remove("hide");
+
   promise.catch(e => console.log(e.message));
 
 });
@@ -98,18 +113,94 @@ btnSignUp.addEventListener('click', e=> {
 btnLogout.addEventListener('click', e => {
 console.log('clicked logout');
 firebase.auth().signOut();
+newAccountbtn.classList.remove("hide");
+rtrnAccountbtn.classList.remove("hide");
+backBtn.classList.add("hide");
+btnLogout.classList.add("hide");
+
+});
+
+tapTarget.addEventListener('click', e => {
+console.log('clicked taptarget');
+score = score + 1;
+console.log(score);
+var user = firebase.auth().currentUser;
+
+if (user) {
+  user.updateProfile({
 
 
+  photoURL: score
+
+  }).then(function() {
+
+  score = user.photoURL;
+
+  }).catch(function(error) {
+  // An error happened.
+  });
+}
 
 
 });
 
-hud.addEventListener('click', function(){
-console.log('clicked hud');
+backtomenu.addEventListener('click', function(){
+console.log('clicked back to menu');
+txtName.classList.add("hide");
+txtEmail.classList.add("hide");
+txtPassword.classList.add("hide");
   mapbox.style.display = 'none';
   hud.style.display = 'none';
   account1.style.display = 'block';
+  newAccountbtn.classList.add("hide");
+  rtrnAccountbtn.classList.add("hide");
+  backBtn.classList.add("hide");
+  btnLogout.classList.remove("hide");
+  btnLogin.classList.add("hide");
 });
+
+backtomap.addEventListener('click', function(){
+console.log('clicked back to map');
+  mapbox.style.display = 'block';
+  webcam.style.display = "none";
+  hud.style.display = 'block';
+  backtomenu.classList.remove('hide');
+  backtomap.classList.add('hide');
+
+});
+
+newAccountbtn.addEventListener('click', function(){
+console.log('clicked new account');
+  txtName.classList.remove("hide");
+  txtEmail.classList.remove("hide");
+  txtPassword.classList.remove("hide");
+  btnSignUp.classList.remove("hide");
+  rtrnAccountbtn.classList.add("hide");
+  backBtn.classList.remove("hide");
+});
+
+rtrnAccountbtn.addEventListener('click', function(){
+console.log('clicked returning account');
+
+  txtEmail.classList.remove("hide");
+  txtPassword.classList.remove("hide");
+  btnLogin.classList.remove("hide");
+  newAccountbtn.classList.add("hide");
+  backBtn.classList.remove("hide");
+});
+
+backBtn.addEventListener('click', function(){
+console.log('clicked back button');
+backBtn.classList.add("hide");
+txtName.classList.add("hide");
+  txtEmail.classList.add("hide");
+  txtPassword.classList.add("hide");
+  btnLogin.classList.add("hide");
+  newAccountbtn.classList.remove("hide");
+  rtrnAccountbtn.classList.remove("hide");
+  btnSignUp.classList.add("hide");
+});
+
 
 
 firebase.auth().onAuthStateChanged(function(user) {

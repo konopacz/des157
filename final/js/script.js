@@ -2,7 +2,9 @@ var mapbox = document.getElementById('map');
 var webcam = document.getElementById('webcam');
 var hud = document.getElementById('hud');
 var canva = document.getElementsByTagName('canvas');
-var account1 = document.getElementById('createAccount');
+var account1 = document.getElementById('accountStuff');
+var backtomenu = document.getElementById('backtomenu');
+var backtomap = document.getElementById('backtomap');
 
 function initMap() {
 
@@ -238,9 +240,11 @@ function initMap() {
       marker.addListener('click', function() {
                 mapbox.style.display = "none";
                 webcam.style.display = "block";
+                backtomenu.classList.add('hide');
+                backtomap.classList.remove('hide');
               });
 
-          
+
 
 
     }, function() {
