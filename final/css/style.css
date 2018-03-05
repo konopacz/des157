@@ -88,4 +88,5 @@ bottom: 0;
   background-color: blue;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
+  z-index: 10;
 }

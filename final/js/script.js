@@ -240,6 +240,8 @@ function initMap() {
                 webcam.style.display = "block";
               });
 
+          
+
 
     }, function() {
       handleLocationError(true, marker, map.getCenter());

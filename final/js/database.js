@@ -24,6 +24,7 @@ const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
+
 var scoreField = document.getElementById('scoreField');
 var score;
 var userName;
@@ -75,8 +76,6 @@ btnSignUp.addEventListener('click', e=> {
       displayName: txtName.value,
       photoURL: txtName.value
 
-
-
       }).then(function() {
       userName = user.displayName;
       score = user.photoURL;
@@ -90,8 +89,6 @@ btnSignUp.addEventListener('click', e=> {
     }
   });
 
-
-
   promise.catch(e => console.log(e.message));
 
 });
@@ -99,9 +96,20 @@ btnSignUp.addEventListener('click', e=> {
 
 
 btnLogout.addEventListener('click', e => {
-  firebase.auth().signOut();
+console.log('clicked logout');
+firebase.auth().signOut();
+
+
+
+
 });
 
+hud.addEventListener('click', function(){
+console.log('clicked hud');
+  mapbox.style.display = 'none';
+  hud.style.display = 'none';
+  account1.style.display = 'block';
+});
 
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -117,11 +125,8 @@ scoreField.innerHTML = userName + "'s score is " + score + "!";
 namefield.innerHTML = userName;
 
 
-    btnLogout.classList.remove('hide');
-
   }else{
-    console.log('not logged in');
-      btnLogout.classList.add('hide');
+    console.log('not logged in by FORCE');
   }
 
 });
