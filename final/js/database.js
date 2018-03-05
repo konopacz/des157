@@ -85,7 +85,7 @@ btnSignUp.addEventListener('click', e=> {
 
       }).then(function() {
       userName = user.displayName;
-      score = '0';
+      
 
 
       namefield.innerHTML = userName;
