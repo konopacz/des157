@@ -34,7 +34,7 @@ const tapTarget = document.getElementById('tapTarget');
 var scoreField = document.getElementById('scoreField');
 var score;
 var userName;
-var name = document.getElementById('namefield');
+var namefield = document.getElementById('namefield');
 
 
 btnLogin.addEventListener('click', e => {
@@ -52,7 +52,7 @@ btnLogin.addEventListener('click', e => {
       }).then(function() {
       userName = user.displayName;
       score = user.photoURL;
-      scoreField.innerHTML = userName + "'s score is " + score + "!";
+      scoreField.innerHTML = score;
       namefield.innerHTML = userName;
       }).catch(function(error) {
       // An error happened.
@@ -62,6 +62,7 @@ btnLogin.addEventListener('click', e => {
     }
   });
   promise.catch(e => console.log(e.message));
+
 });
 
 
@@ -80,12 +81,13 @@ btnSignUp.addEventListener('click', e=> {
       user.updateProfile({
 
       displayName: txtName.value,
-      
+
 
       }).then(function() {
       userName = user.displayName;
-      score = user.photoURL;
-      scoreField.innerHTML = userName + "'s score is " + score + "!";
+      score = '0';
+
+
       namefield.innerHTML = userName;
       }).catch(function(error) {
       // An error happened.
@@ -122,7 +124,9 @@ btnLogout.classList.add("hide");
 
 tapTarget.addEventListener('click', e => {
 console.log('clicked taptarget');
-score = score + 1;
+score = parseFloat(score);
+
+score += 1;
 console.log(score);
 var user = firebase.auth().currentUser;
 
@@ -133,14 +137,14 @@ if (user) {
   photoURL: score
 
   }).then(function() {
-
+scoreField.innerHTML = score;
   score = user.photoURL;
-
+console.log(score);
   }).catch(function(error) {
   // An error happened.
   });
 }
-
+scoreField.innerHTML = score;
 
 });
 
@@ -211,13 +215,13 @@ hud.style.display = 'block';
 account1.style.display = 'none';
 
 userName = user.displayName;
-score = user.photoURL;
-scoreField.innerHTML = userName + "'s score is " + score + "!";
+
+
 namefield.innerHTML = userName;
 
 
   }else{
-    console.log('not logged in by FORCE');
+    console.log('not logged in ');
   }
 
 });
