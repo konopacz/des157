@@ -32,7 +32,7 @@ const tapTarget = document.getElementById('tapTarget');
 
 
 var scoreField = document.getElementById('scoreField');
-var score;
+var score = 0;
 var userName;
 var namefield = document.getElementById('namefield');
 
@@ -52,6 +52,7 @@ btnLogin.addEventListener('click', e => {
       }).then(function() {
       userName = user.displayName;
       score = user.photoURL;
+      console.log(score + 'at time of log in');
       scoreField.innerHTML = score;
       namefield.innerHTML = userName;
       }).catch(function(error) {
@@ -78,6 +79,8 @@ btnSignUp.addEventListener('click', e=> {
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
+
+
       user.updateProfile({
 
       displayName: txtName.value,
@@ -86,6 +89,7 @@ btnSignUp.addEventListener('click', e=> {
       }).then(function() {
       userName = user.displayName;
 
+console.log(score + 'at time of sign in');
 
 
       namefield.innerHTML = userName;
@@ -95,6 +99,8 @@ btnSignUp.addEventListener('click', e=> {
     } else {
       // No user is signed in.
     }
+
+
   });
 
 
@@ -127,7 +133,7 @@ console.log('clicked taptarget');
 score = parseFloat(score);
 
 score += 1;
-console.log(score);
+console.log(score + 'at time of tapping');
 var user = firebase.auth().currentUser;
 
 if (user) {
@@ -137,10 +143,11 @@ if (user) {
   photoURL: score
 
   }).then(function() {
+    console.log(score + 'sent to profile');
     score = user.photoURL;
-scoreField.innerHTML = score;
+console.log(score + 'set within the code from the profile');
 
-console.log(score);
+
   }).catch(function(error) {
   // An error happened.
   });
@@ -215,6 +222,7 @@ txtName.classList.add("hide");
 firebase.auth().onAuthStateChanged(function(user) {
   if(user){
     console.log(user);
+    console.log(score);
 mapbox.style.display = 'block';
 hud.style.display = 'block';
 account1.style.display = 'none';
