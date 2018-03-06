@@ -228,7 +228,6 @@ var backtomap = document.getElementById('backtomap');
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log(user);
-
       console.log(score);
       mapbox.style.display = 'block';
       player.style.display = 'block';

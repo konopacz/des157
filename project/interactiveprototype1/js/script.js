@@ -268,7 +268,12 @@ function initMap() {
         map: map
       });
 
-
+      // var marker2 = new google.maps.Marker({
+      //
+      //        icon: character,
+      //        position: pos,
+      //       map: map
+      //      });
 
       map.setCenter(pos);
       map.setZoom(19);
