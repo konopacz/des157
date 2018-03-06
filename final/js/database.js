@@ -157,7 +157,7 @@ var backtomap = document.getElementById('backtomap');
     }
     scoreField.innerHTML = score;
     mapbox.style.display = 'block';
-    player.style.display = 'block';
+    player.style.zIndex = "100000";
     webcam.style.display = "none";
     hud.style.display = 'block';
     backtomenu.classList.remove('hide');
@@ -170,7 +170,7 @@ var backtomap = document.getElementById('backtomap');
     txtEmail.classList.add("hide");
     txtPassword.classList.add("hide");
     mapbox.style.display = 'none';
-    player.style.display = 'none';
+    player.style.display = "none";
     hud.style.display = 'none';
     account1.style.display = 'block';
     newAccountbtn.classList.add("hide");
@@ -183,7 +183,7 @@ var backtomap = document.getElementById('backtomap');
   backtomap.addEventListener('click', function() {
     console.log('clicked back to map');
     mapbox.style.display = 'block';
-    player.style.display = 'block';
+    player.style.zIndex = "100000";
     webcam.style.display = "none";
     hud.style.display = 'block';
     backtomenu.classList.remove('hide');

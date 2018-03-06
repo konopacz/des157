@@ -276,7 +276,7 @@ function initMap() {
       testStar.addListener('click', function() {
         mapbox.style.display = "none";
         webcam.style.display = "block";
-        player.style.display = "none";
+        player.style.zIndex = "-100000";
         backtomenu.classList.add('hide');
         backtomap.classList.remove('hide');
         testStar.setMap(null);
@@ -285,7 +285,7 @@ function initMap() {
       star1.addListener('click', function() {
         mapbox.style.display = "none";
         webcam.style.display = "block";
-        player.style.display = "none";
+        player.style.zIndex = "-100000";
         backtomenu.classList.add('hide');
         backtomap.classList.remove('hide');
         star1.setMap(null);
@@ -294,7 +294,7 @@ function initMap() {
       star2.addListener('click', function() {
         mapbox.style.display = "none";
         webcam.style.display = "block";
-        player.style.display = "none";
+        player.style.zIndex = "-100000";
         backtomenu.classList.add('hide');
         backtomap.classList.remove('hide');
         star2.setMap(null);

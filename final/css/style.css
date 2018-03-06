@@ -15,10 +15,13 @@ body {
   height: 100%;
   display: block;
   max-width: 768px;
+  max-height: 1024px;
   position: absolute;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 video {
@@ -67,6 +70,7 @@ canvas {
 }
 
 h2 {
+  margin: 0px;
   position: relative;
   z-index: 1;
   color: red;
@@ -75,15 +79,6 @@ h2 {
 
 h1 {
   margin: 0px;
-}
-
-#webcam {
-  display: none;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  height: 100%;
-  text-align: center;
 }
 
 #tapTarget {
@@ -100,8 +95,7 @@ h1 {
 
 #defaultCanvas0 {
   height: 80%;
-  width: 100%;
-  left: -50%;
+  width: 768px;
   /* set to 0% for larger screens */
   margin-right: 0px;
   margin: 0px;
@@ -114,9 +108,9 @@ h1 {
   max-width: 768px;
   width: 100%;
   display: none;
-  position: fixed;
-  bottom: 0;
+  position: relative;
   height: 20%;
+  bottom: 50px;
   background-color: blue;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
@@ -126,7 +120,20 @@ h1 {
 @media screen and (min-width: 600px) {
   /* Styles go here */
   #defaultCanvas0 {
-    left: 0%;
+    left: -0%;
     /* set to 0% for larger screens */
   }
+  #tapTarget {
+    right: 40%;
+  }
+}
+
+#webcam {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 80%;
+  text-align: center;
+  bottom: 50px;
 }
