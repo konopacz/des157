@@ -227,7 +227,7 @@ function initMap() {
 
   var test = new google.maps.LatLng(38.538411, -34.896872);
   if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function(position) {
       pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
