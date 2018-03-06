@@ -85,7 +85,7 @@ btnSignUp.addEventListener('click', e=> {
 
       }).then(function() {
       userName = user.displayName;
-      
+
 
 
       namefield.innerHTML = userName;
@@ -137,15 +137,20 @@ if (user) {
   photoURL: score
 
   }).then(function() {
+    score = user.photoURL;
 scoreField.innerHTML = score;
-  score = user.photoURL;
+
 console.log(score);
   }).catch(function(error) {
   // An error happened.
   });
 }
 scoreField.innerHTML = score;
-
+mapbox.style.display = 'block';
+webcam.style.display = "none";
+hud.style.display = 'block';
+backtomenu.classList.remove('hide');
+backtomap.classList.add('hide');
 });
 
 backtomenu.addEventListener('click', function(){

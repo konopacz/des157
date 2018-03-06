@@ -220,7 +220,10 @@ function initMap() {
 
 
   var pos;
-  var marker = new google.maps.Marker;
+  var marLoc;
+    var image = '../images/star.png';
+    var character = '../images/erikhead.png';
+
 
   var test = new google.maps.LatLng(38.538411, -34.896872);
   if (navigator.geolocation) {
@@ -229,19 +232,35 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
+      marLoc = {
+        lat: position.coords.latitude + 0.00025,
+        lng: position.coords.longitude + 0.0003
+      };
+      var marker = new google.maps.Marker({
 
+             icon: image,
+             position: marLoc,
+            map: map
+           });
 
-      marker.setPosition(pos);
+           var marker2 = new google.maps.Marker({
 
-      marker.setMap(map);
+                  icon: character,
+                  position: pos,
+                 map: map
+                });
+      // marker.setPosition(marLoc);
+
+      // marker.setMap(map);
       map.setCenter(pos);
-      map.setZoom(20);
+      map.setZoom(19);
 
       marker.addListener('click', function() {
                 mapbox.style.display = "none";
                 webcam.style.display = "block";
                 backtomenu.classList.add('hide');
                 backtomap.classList.remove('hide');
+                marker.setMap(null);
               });
 
 
