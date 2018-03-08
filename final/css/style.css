@@ -93,6 +93,25 @@ h1 {
   z-index: 10000;
   width: 150px;
   height: 150px;
+  animation-name: null;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes shineTapped {
+  0% {
+    top: 40%;
+  }
+  50% {
+    top: 10%;
+  }
+  60% {
+    top: 12%;
+  }
+  100% {
+    top: 80%;
+    right: 0%;
+  }
 }
 
 #tapTarget img {

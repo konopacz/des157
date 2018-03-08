@@ -103,7 +103,8 @@ var howToPlay = document.getElementById('howToPlay');
           userName = user.displayName;
 
           console.log(score + ' at time of sign in');
-
+          localStorage.setItem("star1", "0");
+          localStorage.setItem("star2", "0");
 
           namefield.innerHTML = userName;
         }).catch(function(error) {
@@ -176,14 +177,20 @@ var howToPlay = document.getElementById('howToPlay');
         // An error happened.
       });
     }
-    scoreField.innerHTML = score;
-    mapbox.style.display = 'block';
-    player.style.zIndex = "100000";
-    webcam.style.display = "none";
-    hud.style.display = 'block';
-    backtomenu.classList.remove('hide');
-    backtomap.classList.add('hide');
-    footer.classList.add("hide");
+    tapTarget.style.animationName = "shineTapped";
+
+
+    setTimeout(function() {
+      scoreField.innerHTML = score;
+      mapbox.style.display = 'block';
+      player.style.zIndex = "100000";
+      webcam.style.display = "none";
+      hud.style.display = 'block';
+      backtomenu.classList.remove('hide');
+      backtomap.classList.add('hide');
+      footer.classList.add("hide");
+      tapTarget.style.animationName = "null";
+    }, 1500);
   });
 
   backtomenu.addEventListener('click', function() {
