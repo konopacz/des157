@@ -61,13 +61,12 @@ canvas {
 #accountStuff {
   max-width: 100%;
   height: 100%;
-
   display: block;
   position: relative;
   padding: 0px;
   margin: 0px;
   display: block;
-text-align: center;
+  text-align: center;
 }
 
 h2 {
@@ -92,10 +91,8 @@ h1 {
   top: 40%;
   position: absolute;
   z-index: 10000;
-
   width: 150px;
   height: 150px;
-
 }
 
 #tapTarget img {
@@ -123,10 +120,8 @@ h1 {
   position: relative;
   height: 20%;
   bottom: 50px;
-
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-
 }
 
 #hud img {
@@ -159,12 +154,11 @@ h1 {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-margin-bottom: 100px;
-
+  margin-bottom: 100px;
   position: relative;
 }
 
-footer{
+footer {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   position: fixed;
@@ -172,28 +166,53 @@ footer{
   margin-left: 6px;
   margin-bottom: 3px;
 }
+
 footer p {
   margin-bottom: 0px;
-    color: #3a3a3a;
+  color: #3a3a3a;
 }
 
 #newAccountbtn, #rtrnAccountbtn {
   margin-left: auto;
   margin-right: auto;
-position: relative;
+  position: relative;
   width: 230px;
   height: 90px;
   text-align: center;
-    background-color: #d1a715;
+  background-color: #d1a715;
   border-color: #fce70c;
   border-width: 10px;
   border-style: outset;
   margin-top: 30px;
 }
 
+#howToPlay {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 230px;
+  height: 140px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #d1a715;
+  border-color: #fce70c;
+  border-width: 10px;
+  border-style: outset;
+  margin-top: 30px;
+  margin-bottom: 40px
+}
+
+#howToPlay h1 {
+  font-size: 24px;
+  width: 200px;
+  padding-left: 10px;
+  text-align: justify;
+}
+
 #newAccountbtn:active, #rtrnAccountbtn:active {
   border-style: inset;
 }
+
 #webcam {
   display: none;
   width: 100%;
@@ -233,7 +252,7 @@ border-style: solid;
 border-color: #2d2107; */
 }
 
-.inputstuff{
+.inputstuff {
   margin-top: 40px;
 }
 
@@ -257,44 +276,46 @@ input {
 
 #backtomenu {
   z-index: 10000000;
-    background-color: #3054c6;
-    border-color: #1b3eb4;
-    position: relative;
-    top: 0px;
-    left: 20px;
+  background-color: #3054c6;
+  border-color: #1b3eb4;
+  position: relative;
+  top: 0px;
+  left: 20px;
 }
+
 #backtomap {
   z-index: 10000000;
-    background-color: #3054c6;
-    border-color: #1b3eb4;
-    position: relative;
-    top: 0px;
-    left: 20px;
+  background-color: #3054c6;
+  border-color: #1b3eb4;
+  position: relative;
+  top: 0px;
+  left: 20px;
 }
 
 #btnLogout {
-  z-index: 10000000;
-    background-color: #a53e3a;
-    border-color: #8c201e;
-    position: relative;
-    top: 0px;
-    left: 30px;
+  background-color: #a53e3a;
+  border-color: #8c201e;
+}
+
+#backtoGame {
+  background-color: #32e01f;
+  border-color: #1ea80f;
 }
 
 #namefield {
   position: relative;
   left: 20px;
   font-family: 'Londrina Solid', cursive;
-  color: #fff2c7;
+  color: #fffff7;
+  width: 150px;
   font-size: 48px;
   top: 5px;
-
 }
 
-#scoreField{
-  float:right;
+#scoreField {
+  float: right;
   font-family: 'Londrina Solid', cursive;
-  color: #fff2c7;
+  color: #fffff7;
   font-size: 48px;
   margin-right: 30px;
   margin-top: 30px;
@@ -310,7 +331,6 @@ input {
     right: 40%;
     text-align: center;
   }
-
   #icon {
     position: absolute;
     width: 150px !important;
@@ -318,21 +338,19 @@ input {
     right: 90px;
     top: 10px;
   }
-
   #namefield {
     position: relative;
     left: 20px;
     font-family: 'Londrina Solid', cursive;
-    color: #fff2c7;
+    color: #fffff7;
     font-size: 100px;
     top: 5px;
-
+    width: 150px;
   }
-
-  #scoreField{
-    float:right;
+  #scoreField {
+    float: right;
     font-family: 'Londrina Solid', cursive;
-    color: #fff2c7;
+    color: #fffff7;
     font-size: 100px;
     margin-right: 50px;
     margin-top: 30px;

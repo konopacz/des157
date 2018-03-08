@@ -10,6 +10,8 @@ var backBtn = document.getElementById('backBtn');
 var backtomenu = document.getElementById('backtomenu');
 var backtomap = document.getElementById('backtomap');
 var footer = document.getElementById('footer');
+var backtoGame = document.getElementById('backtoGame');
+var howToPlay = document.getElementById('howToPlay');
 
 (function() {
 
@@ -144,7 +146,7 @@ var footer = document.getElementById('footer');
     newAccountbtn.classList.remove("hide");
     rtrnAccountbtn.classList.remove("hide");
     backBtn.classList.add("hide");
-    btnLogout.classList.remove("hide");
+    backtoGame.classList.add('hide');
     btnLogin.classList.add("hide");
 
   });
@@ -195,8 +197,24 @@ var footer = document.getElementById('footer');
     newAccountbtn.classList.add("hide");
     rtrnAccountbtn.classList.add("hide");
     backBtn.classList.add("hide");
-    btnLogout.classList.remove("hide");
+    btnLogout.classList.remove('hide');
     btnLogin.classList.add("hide");
+    backtoGame.classList.remove('hide');
+    howToPlay.classList.remove('hide');
+  });
+
+  backtoGame.addEventListener('click', function() {
+    console.log('clicked back to map');
+    account1.style.display = 'none';
+    mapbox.style.display = 'block';
+    player.style.display = "block";
+    player.style.zIndex = "100000";
+    webcam.style.display = "none";
+    hud.style.display = 'block';
+    backtomenu.classList.remove('hide');
+    backtomap.classList.add('hide');
+    howToPlay.classList.add('hide');
+
   });
 
   backtomap.addEventListener('click', function() {
