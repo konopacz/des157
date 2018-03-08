@@ -6,6 +6,7 @@ var canva = document.getElementsByTagName('canvas');
 var account1 = document.getElementById('accountStuff');
 var backtomenu = document.getElementById('backtomenu');
 var backtomap = document.getElementById('backtomap');
+var footer = document.getElementById('footer');
 
 function initMap() {
 
@@ -15,7 +16,7 @@ function initMap() {
     [{
         elementType: 'geometry',
         stylers: [{
-          color: '#ebe3cd'
+          color: '#3054c6'
         }]
       },
       {
@@ -55,7 +56,7 @@ function initMap() {
         featureType: 'landscape.natural',
         elementType: 'geometry',
         stylers: [{
-          color: '#dfd2ae'
+          color: '#4f85ff'
         }]
       },
       {
@@ -76,56 +77,56 @@ function initMap() {
         featureType: 'poi.park',
         elementType: 'geometry.fill',
         stylers: [{
-          color: '#a5b076'
+          color: '#38ff36'
         }]
       },
       {
         featureType: 'poi.park',
         elementType: 'labels.text.fill',
         stylers: [{
-          color: '#447530'
+          color: '#38ff36'
         }]
       },
       {
         featureType: 'road',
         elementType: 'geometry',
         stylers: [{
-          color: '#f5f1e6'
+          color: '#fcf63c'
         }]
       },
       {
         featureType: 'road.arterial',
         elementType: 'geometry',
         stylers: [{
-          color: '#fdfcf8'
+          color: '#fcf63c'
         }]
       },
       {
         featureType: 'road.highway',
         elementType: 'geometry',
         stylers: [{
-          color: '#f8c967'
+          color: '#fcf63c'
         }]
       },
       {
         featureType: 'road.highway',
         elementType: 'geometry.stroke',
         stylers: [{
-          color: '#e9bc62'
+          color: '#fcf63c'
         }]
       },
       {
         featureType: 'road.highway.controlled_access',
         elementType: 'geometry',
         stylers: [{
-          color: '#e98d58'
+          color: '#fcf63c'
         }]
       },
       {
         featureType: 'road.highway.controlled_access',
         elementType: 'geometry.stroke',
         stylers: [{
-          color: '#db8555'
+          color: '#fcf63c'
         }]
       },
       {
@@ -167,7 +168,7 @@ function initMap() {
         featureType: 'water',
         elementType: 'geometry.fill',
         stylers: [{
-          color: '#b9d3c2'
+          color: '#5259ed'
         }]
       },
       {
@@ -224,8 +225,8 @@ function initMap() {
   var marLoc;
   var davisSCC;
   var davisSCC2;
-  var image = '../images/star.png';
-  var character = '../images/erikhead.png';
+  var image = '../images/alertbox.gif';
+  var character = '../images/alertbox.gif';
 
 
   var test = new google.maps.LatLng(38.538411, -34.896872);
@@ -303,22 +304,22 @@ function initMap() {
 
 
     }, function() {
-      handleLocationError(true, marker, map.getCenter());
+      handleLocationError(true, star2, map.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
-    handleLocationError(false, marker, map.getCenter());
+    handleLocationError(false, star2, map.getCenter());
   }
 
 
 
 
   function handleLocationError(browserHasGeolocation, marker, pos) {
-    marker.setPosition(pos);
-    marker.setContent(browserHasGeolocation ?
+    star2.setPosition(pos);
+    star2.setContent(browserHasGeolocation ?
       'Error: The Geolocation service failed.' :
       'Error: Your browser doesn\'t support geolocation.');
-    marker.open(map);
+    star2.open(map);
 
   }
 

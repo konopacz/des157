@@ -61,12 +61,13 @@ canvas {
 #accountStuff {
   max-width: 100%;
   height: 100%;
-  background-color: yellow;
+
   display: block;
   position: relative;
   padding: 0px;
   margin: 0px;
   display: block;
+text-align: center;
 }
 
 h2 {
@@ -79,6 +80,10 @@ h2 {
 
 h1 {
   margin: 0px;
+  margin-top: 15px;
+  font-family: 'Londrina Solid', cursive;
+  color: #3a3a3a;
+  font-size: 48px;
 }
 
 #tapTarget {
@@ -87,10 +92,17 @@ h1 {
   top: 40%;
   position: absolute;
   z-index: 10000;
-  background-color: purple;
+
   width: 150px;
   height: 150px;
-  opacity: 0.2;
+
+}
+
+#tapTarget img {
+  position: relative;
+  width: 300px;
+  left: -70px;
+  top: -50px;
 }
 
 #defaultCanvas0 {
@@ -111,10 +123,181 @@ h1 {
   position: relative;
   height: 20%;
   bottom: 50px;
-  background-color: blue;
+
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  z-index: 10;
+
+}
+
+#hud img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+#icon {
+  position: absolute;
+  width: 100px !important;
+  height: 100px !important;
+  right: 50px;
+  top: 10px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+
+.headerIMG {
+  width: 90%;
+  display: block;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+margin-bottom: 100px;
+
+  position: relative;
+}
+
+footer{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  margin-left: 6px;
+  margin-bottom: 3px;
+}
+footer p {
+  margin-bottom: 0px;
+    color: #3a3a3a;
+}
+
+#newAccountbtn, #rtrnAccountbtn {
+  margin-left: auto;
+  margin-right: auto;
+position: relative;
+  width: 230px;
+  height: 90px;
+  text-align: center;
+    background-color: #d1a715;
+  border-color: #fce70c;
+  border-width: 10px;
+  border-style: outset;
+  margin-top: 30px;
+}
+
+#newAccountbtn:active, #rtrnAccountbtn:active {
+  border-style: inset;
+}
+#webcam {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 80%;
+  text-align: center;
+  bottom: 50px;
+}
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d1a715;
+  width: 100px;
+  height: 50px;
+  border-width: 5px;
+  border-style: outset;
+  border-color: #fce70c;
+  font-family: 'Londrina Solid', cursive;
+  color: #3a3a3a;
+  font-size: 24px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+}
+
+.bordermaker {
+  /* width: 250px;
+  position: absolute;
+  height: 110px;
+top: -20px;
+left: -20px;
+border-width: 10px;
+border-style: solid;
+border-color: #2d2107; */
+}
+
+.inputstuff{
+  margin-top: 40px;
+}
+
+button:active {
+  border-style: inset;
+}
+
+input {
+  width: 200px;
+  height: 50px;
+  font-family: 'Londrina Solid', cursive;
+  color: #3a3a3a;
+  font-size: 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-width: 3px;
+  border-color: #fce70c;
+}
+
+#backtomenu {
+  z-index: 10000000;
+    background-color: #3054c6;
+    border-color: #1b3eb4;
+    position: relative;
+    top: 0px;
+    left: 20px;
+}
+#backtomap {
+  z-index: 10000000;
+    background-color: #3054c6;
+    border-color: #1b3eb4;
+    position: relative;
+    top: 0px;
+    left: 20px;
+}
+
+#btnLogout {
+  z-index: 10000000;
+    background-color: #a53e3a;
+    border-color: #8c201e;
+    position: relative;
+    top: 0px;
+    left: 30px;
+}
+
+#namefield {
+  position: relative;
+  left: 20px;
+  font-family: 'Londrina Solid', cursive;
+  color: #fff2c7;
+  font-size: 48px;
+  top: 5px;
+
+}
+
+#scoreField{
+  float:right;
+  font-family: 'Londrina Solid', cursive;
+  color: #fff2c7;
+  font-size: 48px;
+  margin-right: 30px;
+  margin-top: 30px;
 }
 
 @media screen and (min-width: 600px) {
@@ -125,15 +308,33 @@ h1 {
   }
   #tapTarget {
     right: 40%;
+    text-align: center;
   }
-}
 
-#webcam {
-  display: none;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 80%;
-  text-align: center;
-  bottom: 50px;
+  #icon {
+    position: absolute;
+    width: 150px !important;
+    height: 150px !important;
+    right: 90px;
+    top: 10px;
+  }
+
+  #namefield {
+    position: relative;
+    left: 20px;
+    font-family: 'Londrina Solid', cursive;
+    color: #fff2c7;
+    font-size: 100px;
+    top: 5px;
+
+  }
+
+  #scoreField{
+    float:right;
+    font-family: 'Londrina Solid', cursive;
+    color: #fff2c7;
+    font-size: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+  }
 }

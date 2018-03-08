@@ -9,7 +9,7 @@ var rtrnAccountbtn = document.getElementById('rtrnAccountbtn');
 var backBtn = document.getElementById('backBtn');
 var backtomenu = document.getElementById('backtomenu');
 var backtomap = document.getElementById('backtomap');
-
+var footer = document.getElementById('footer');
 
 (function() {
 
@@ -63,6 +63,14 @@ var backtomap = document.getElementById('backtomap');
         // No user is signed in.
       }
     });
+    txtName.classList.add("hide");
+    txtEmail.classList.add("hide");
+    txtPassword.classList.add("hide");
+    btnSignUp.classList.add("hide");
+    btnLogin.classList.add("hide");
+    rtrnAccountbtn.classList.add("hide");
+    backBtn.classList.add("hide");
+
     promise.catch(e => console.log(e.message));
 
   });
@@ -113,7 +121,8 @@ var backtomap = document.getElementById('backtomap');
     btnSignUp.classList.add("hide");
     rtrnAccountbtn.classList.add("hide");
     backBtn.classList.add("hide");
-    btnLogout.classList.remove("hide");
+    footer.classList.add("hide");
+    btnLogin.classList.add("hide");
 
     promise.catch(e => console.log(e.message));
 
@@ -128,6 +137,15 @@ var backtomap = document.getElementById('backtomap');
     rtrnAccountbtn.classList.remove("hide");
     backBtn.classList.add("hide");
     btnLogout.classList.add("hide");
+    mapbox.style.display = 'none';
+    player.style.display = "none";
+    hud.style.display = 'none';
+    account1.style.display = 'block';
+    newAccountbtn.classList.remove("hide");
+    rtrnAccountbtn.classList.remove("hide");
+    backBtn.classList.add("hide");
+    btnLogout.classList.remove("hide");
+    btnLogin.classList.add("hide");
 
   });
 
@@ -162,6 +180,7 @@ var backtomap = document.getElementById('backtomap');
     hud.style.display = 'block';
     backtomenu.classList.remove('hide');
     backtomap.classList.add('hide');
+    footer.classList.add("hide");
   });
 
   backtomenu.addEventListener('click', function() {
@@ -197,6 +216,7 @@ var backtomap = document.getElementById('backtomap');
     txtEmail.classList.remove("hide");
     txtPassword.classList.remove("hide");
     btnSignUp.classList.remove("hide");
+    newAccountbtn.classList.add("hide");
     rtrnAccountbtn.classList.add("hide");
     backBtn.classList.remove("hide");
   });
@@ -209,6 +229,8 @@ var backtomap = document.getElementById('backtomap');
     btnLogin.classList.remove("hide");
     newAccountbtn.classList.add("hide");
     backBtn.classList.remove("hide");
+    newAccountbtn.classList.add("hide");
+    rtrnAccountbtn.classList.add("hide");
   });
 
   backBtn.addEventListener('click', function() {

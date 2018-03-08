@@ -18,28 +18,37 @@
 
   <div id='accountStuff'>
 
-    <h1 id="newAccountbtn">New Account</h1>
-    <h1 id="rtrnAccountbtn">Returning Player</h1>
+    <img src="../images/skyboxclouds.png" alt='sky' class='background'>
+    <img src="../images/sunshineLogo.png" alt='Sunshine' class='headerIMG'>
+
+    <div id="newAccountbtn" >
+      <div class="bordermaker">
+      </div>
+        <h1 >SIGN UP</h1>
+    </div>
+
+    <div id="rtrnAccountbtn" >
+      <div class="bordermaker">
+      </div>
+    <h1>LOG IN</h1>
+
+    </div>
+
+    <div class='inputstuff'>
+        <input id="txtName" class="hide" placeholder="Display Name">
+        <input id="txtEmail" class="hide" type="email" placeholder="Email">
+
+        <input id="txtPassword" class="hide" type="password" placeholder="Password">
+    </div>
+
+      <button id="btnSignUp" class="hide">Sign Up</button>
+      <button id="btnLogin" class="hide">Log In</button>
+      <button id="backBtn" class='hide'>Back</button>
 
 
-    <input id="txtName" class="hide" placeholder="Display Name">
-    <input id="txtEmail" class="hide" type="email" placeholder="Email">
-
-    <input id="txtPassword" class="hide" type="password" placeholder="Password">
-    <button id="btnSignUp" class="hide">Sign Up</button>
-
-
-
-    <button id="btnLogin" class="hide">Log In</button>
-
-
-
-    <h2 id="backBtn" class='hide'>Back</h2>
-
-
-
-    <button id="btnLogout" class="hide">Log Out</button>
-
+      <footer id='footer'>
+      <p>©Erik Laats 2018</p>
+      </footer>
   </div>
 
 
@@ -50,30 +59,33 @@
 
 
   <div id='player'>
-    <img src="../images/erikhead.png" alt="character">
+    <img src="../images/playerAni.gif" alt="character">
   </div>
 
   <div id='webcam'>
 
     <div id="tapTarget">
-
+<img src="../images/sunshine.gif" alt="goldsun">
     </div>
 
   </div>
 
 
   <div id='hud'>
-
+<img src="../images/hudbackground.png" alt='hud'>
+<img id='icon' class='icon' src="../images/sunshineicon.png" alt='icon'>
     <h2 id="scoreField">0*</h2>
     <h2 id="namefield">emptyName</h2>
 
 
     <div class='menubtn'>
     </div>
-    <button id="backtomenu">Menu</button>
-    <button id="backtomap" class="hide">Back to Map</button>
-
+    <button id="backtomenu">MENU</button>
+    <button id="backtomap" class="hide">MAP</button>
+    <button id="btnLogout">Log Out</button>
   </div>
+
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
