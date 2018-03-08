@@ -148,6 +148,7 @@ var howToPlay = document.getElementById('howToPlay');
     backBtn.classList.add("hide");
     backtoGame.classList.add('hide');
     btnLogin.classList.add("hide");
+    howToPlay.classList.add('hide');
 
   });
 
