@@ -7,11 +7,13 @@ var account1 = document.getElementById('accountStuff');
 var newAccountbtn = document.getElementById('newAccountbtn');
 var rtrnAccountbtn = document.getElementById('rtrnAccountbtn');
 var backBtn = document.getElementById('backBtn');
+var continueBtn = document.getElementById('continueBtn');
 var backtomenu = document.getElementById('backtomenu');
 var backtomap = document.getElementById('backtomap');
 var footer = document.getElementById('footer');
 var backtoGame = document.getElementById('backtoGame');
 var howToPlay = document.getElementById('howToPlay');
+
 
 (function() {
 
@@ -153,6 +155,19 @@ var howToPlay = document.getElementById('howToPlay');
 
   });
 
+  continueBtn.addEventListener('click', e => {
+    console.log('clicked continue');
+
+    newAccountbtn.classList.remove("hide");
+    rtrnAccountbtn.classList.remove("hide");
+    account1.style.display = 'block';
+    newAccountbtn.classList.remove("hide");
+    rtrnAccountbtn.classList.remove("hide");
+    continueBtn.classList.add('hide');
+    howToPlay.classList.add('hide');
+
+  });
+
   tapTarget.addEventListener('click', e => {
     console.log('clicked taptarget');
     score = parseFloat(score);
@@ -209,6 +224,8 @@ var howToPlay = document.getElementById('howToPlay');
     btnLogin.classList.add("hide");
     backtoGame.classList.remove('hide');
     howToPlay.classList.remove('hide');
+    footer.classList.remove('hide');
+    continueBtn.classList.add('hide');
   });
 
   backtoGame.addEventListener('click', function() {
@@ -222,6 +239,7 @@ var howToPlay = document.getElementById('howToPlay');
     backtomenu.classList.remove('hide');
     backtomap.classList.add('hide');
     howToPlay.classList.add('hide');
+    footer.classList.add('hide');
 
   });
 
@@ -233,7 +251,7 @@ var howToPlay = document.getElementById('howToPlay');
     hud.style.display = 'block';
     backtomenu.classList.remove('hide');
     backtomap.classList.add('hide');
-
+    continueBtn.classList.add('hide');
   });
 
   newAccountbtn.addEventListener('click', function() {

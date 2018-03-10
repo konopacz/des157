@@ -236,54 +236,22 @@ function initMap() {
   console.log(star2status);
 
   var test = new google.maps.LatLng(38.538411, -34.896872);
+
   if (navigator.geolocation) {
     console.log('regular navigator runs');
-    davisSCC = {
-      lat: 38.539548 - 0.00025,
-      lng: -121.751687 - 0.0004
-    };
-    davisSCC2 = {
-      lat: 38.539548 - 0.00045,
-      lng: -121.751687 + 0.0003
-    };
-    var star1status = localStorage.getItem("star1");
-    var star2status = localStorage.getItem("star2");
-    console.log(star1status);
-    console.log(star2status);
 
-    if (star1status == "0") {
-      var star1 = new google.maps.Marker({
-
-        icon: image,
-        position: davisSCC,
-        map: map
-      });
-    } else {
-      var star1 = new google.maps.Marker({
-
-        icon: image,
-        position: davisSCC,
-
-      });
-    }
-    if (star2status == "0") {
-      var star2 = new google.maps.Marker({
-
-        icon: image,
-        position: davisSCC2,
-        map: map
-      });
-    } else {
-
-      var star2 = new google.maps.Marker({
-
-        icon: image,
-        position: davisSCC2,
-
-      });
-    }
 
     navigator.geolocation.watchPosition(function(position) {
+      console.log('where u at runs');
+
+      pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      map.setCenter(pos);
+    });
+
+    navigator.geolocation.getCurrentPosition(function(position) {
       console.log('watchposition runs');
       pos = {
         lat: position.coords.latitude,
@@ -302,11 +270,56 @@ function initMap() {
         map: map
       });
 
+      davisSCC = {
+        lat: position.coords.latitude - 0.00025,
+        lng: position.coords.longitude - 0.0004
+      };
+      davisSCC2 = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude + 0.0003
+      };
+      var star1status = localStorage.getItem("star1");
+      var star2status = localStorage.getItem("star2");
+      console.log(star1status);
+      console.log(star2status);
+
+      if (star1status !== "1") {
+        var star1 = new google.maps.Marker({
+
+          icon: image,
+          position: davisSCC,
+          map: map
+        });
+      } else {
+        var star1 = new google.maps.Marker({
+
+          icon: image,
+          position: davisSCC,
+
+        });
+      }
+      if (star2status !== "1") {
+        var star2 = new google.maps.Marker({
+
+          icon: image,
+          position: davisSCC2,
+          map: map
+        });
+      } else {
+
+        var star2 = new google.maps.Marker({
+
+          icon: image,
+          position: davisSCC2,
+
+        });
+      }
 
 
 
 
-      map.setCenter(pos);
+
+
       map.setZoom(19);
 
       testStar.addListener('click', function() {
@@ -351,6 +364,11 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, star2, map.getCenter());
   }
+
+
+
+
+
 
 
 

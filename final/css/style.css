@@ -22,6 +22,8 @@ body {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 video {
@@ -209,8 +211,8 @@ footer p {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 230px;
-  height: 140px;
+  width: 60%;
+  height: 40%;
   font-size: 14px;
   text-align: center;
   background-color: #d1a715;
@@ -222,10 +224,11 @@ footer p {
 }
 
 #howToPlay h1 {
-  font-size: 24px;
-  width: 200px;
+  font-size: 18px;
+  width: 95%;
   padding-left: 10px;
-  text-align: justify;
+  text-align: left;
+  padding-bottom: 20px;
 }
 
 #newAccountbtn:active, #rtrnAccountbtn:active {
@@ -373,5 +376,12 @@ input {
     font-size: 100px;
     margin-right: 50px;
     margin-top: 30px;
+  }
+  #howToPlay h1 {
+    font-size: 28px;
+    width: 95%;
+    padding-left: 10px;
+    text-align: justify;
+    padding-bottom: 20px;
   }
 }
