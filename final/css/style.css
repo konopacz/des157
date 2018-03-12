@@ -89,7 +89,7 @@ h1 {
 
 #tapTarget {
   display: block;
-  right: 30%;
+  right: 35%;
   top: 40%;
   position: absolute;
   z-index: 10000;
@@ -173,13 +173,14 @@ h1 {
 }
 
 .headerIMG {
-  width: 90%;
+  width: auto;
   display: block;
-  max-width: 600px;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   position: relative;
+  height: 25%;
 }
 
 footer {
@@ -348,7 +349,7 @@ input {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 760px) and (min-height:760px) {
   /* Styles go here */
   /* #defaultCanvas0 {
     left: -0%;
@@ -388,5 +389,15 @@ input {
     padding-left: 10px;
     text-align: justify;
     padding-bottom: 20px;
+  }
+  .headerIMG {
+    width: auto;
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    position: relative;
+    height: 25%;
   }
 }

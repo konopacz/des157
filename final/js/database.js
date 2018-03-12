@@ -107,7 +107,8 @@ var howToPlay = document.getElementById('howToPlay');
           console.log(score + ' at time of sign in');
           localStorage.setItem("star1", "0");
           localStorage.setItem("star2", "0");
-
+          localStorage.setItem("star3", "0");
+          localStorage.setItem("star4", "0");
           namefield.innerHTML = userName;
         }).catch(function(error) {
           // An error happened.

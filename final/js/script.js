@@ -225,6 +225,8 @@ function initMap() {
   var marLoc;
   var davisSCC;
   var davisSCC2;
+  var flower3;
+  var flower4;
   var image = '../images/alertbox.gif';
   var character = '../images/alertbox.gif';
 
@@ -232,6 +234,8 @@ function initMap() {
 
   var star1status = localStorage.getItem("star1");
   var star2status = localStorage.getItem("star2");
+  var star3status = localStorage.getItem("star3");
+  var star4status = localStorage.getItem("star4");
   console.log(star1status);
   console.log(star2status);
 
@@ -278,8 +282,20 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude + 0.0003
       };
-      var star1status = localStorage.getItem("star1");
-      var star2status = localStorage.getItem("star2");
+      flower3 = {
+        lat: position.coords.latitude + 0.00025,
+        lng: position.coords.longitude + 0.0004
+      };
+      flower4 = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude - 0.0003
+      };
+
+
+      star1status = localStorage.getItem("star1");
+      star2status = localStorage.getItem("star2");
+      star3status = localStorage.getItem("star3");
+      star4status = localStorage.getItem("star4");
       console.log(star1status);
       console.log(star2status);
 
@@ -311,6 +327,39 @@ function initMap() {
 
           icon: image,
           position: davisSCC2,
+
+        });
+      }
+      if (star3status !== "1") {
+        var star3 = new google.maps.Marker({
+
+          icon: image,
+          position: flower3,
+          map: map
+        });
+      } else {
+
+        var star3 = new google.maps.Marker({
+
+          icon: image,
+          position: flower3,
+
+        });
+      }
+
+      if (star4status !== "1") {
+        var star4 = new google.maps.Marker({
+
+          icon: image,
+          position: flower4,
+          map: map
+        });
+      } else {
+
+        var star4 = new google.maps.Marker({
+
+          icon: image,
+          position: flower4,
 
         });
       }
@@ -351,6 +400,29 @@ function initMap() {
         backtomap.classList.remove('hide');
         star2.setMap(null);
         localStorage.setItem("star2", "1");
+        star2status = localStorage.getItem("star2");
+        console.log(star2status + ", star two collected");
+      });
+
+      star3.addListener('click', function() {
+        mapbox.style.display = "none";
+        webcam.style.display = "block";
+        player.style.zIndex = "-100000";
+        backtomenu.classList.add('hide');
+        backtomap.classList.remove('hide');
+        star3.setMap(null);
+        localStorage.setItem("star3", "1");
+        star2status = localStorage.getItem("star2");
+        console.log(star2status + ", star two collected");
+      });
+      star4.addListener('click', function() {
+        mapbox.style.display = "none";
+        webcam.style.display = "block";
+        player.style.zIndex = "-100000";
+        backtomenu.classList.add('hide');
+        backtomap.classList.remove('hide');
+        star4.setMap(null);
+        localStorage.setItem("star4", "1");
         star2status = localStorage.getItem("star2");
         console.log(star2status + ", star two collected");
       });
