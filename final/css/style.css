@@ -175,12 +175,12 @@ h1 {
 .headerIMG {
   width: auto;
   display: block;
-  max-width: 90%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
   position: relative;
-  height: 25%;
+  /* height: 25%; */
 }
 
 footer {
@@ -229,7 +229,7 @@ footer p {
 }
 
 #howToPlay h1 {
-  font-size: 16px;
+  font-size: 18px;
   width: 95%;
   padding-left: 10px;
   text-align: left;
@@ -349,7 +349,7 @@ input {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 760px) and (min-height:760px) {
+@media screen and (min-width: 740px) and (min-height:740px) {
   /* Styles go here */
   /* #defaultCanvas0 {
     left: -0%;
@@ -393,11 +393,20 @@ input {
   .headerIMG {
     width: auto;
     display: block;
-    max-width: 600px;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
     position: relative;
-    height: 25%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #howToPlay h1 {
+    font-size: 14px;
+    width: 95%;
+    padding-left: 10px;
+    text-align: left;
+    padding-bottom: 20px;
   }
 }

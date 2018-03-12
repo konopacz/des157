@@ -283,12 +283,12 @@ function initMap() {
         lng: position.coords.longitude + 0.0003
       };
       flower3 = {
-        lat: position.coords.latitude + 0.00025,
-        lng: position.coords.longitude + 0.0004
+        lat: position.coords.latitude + 0.00045,
+        lng: position.coords.longitude + 0.0005
       };
       flower4 = {
         lat: position.coords.latitude,
-        lng: position.coords.longitude - 0.0003
+        lng: position.coords.longitude - 0.0006
       };
 
 
