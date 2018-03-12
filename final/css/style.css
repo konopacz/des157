@@ -401,7 +401,7 @@ input {
   }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 350px) {
   #howToPlay h1 {
     font-size: 14px;
     width: 95%;
