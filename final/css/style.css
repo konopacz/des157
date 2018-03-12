@@ -84,7 +84,7 @@ h1 {
   margin-top: 15px;
   font-family: 'Londrina Solid', cursive;
   color: #3a3a3a;
-  font-size: 48px;
+  font-size: 44px;
 }
 
 #tapTarget {
@@ -98,6 +98,7 @@ h1 {
   animation-name: null;
   animation-duration: 1.5s;
   animation-timing-function: ease-in;
+  cursor: pointer;
 }
 
 @keyframes shineTapped {
@@ -121,18 +122,20 @@ h1 {
   width: 300px;
   left: -70px;
   top: -50px;
+  cursor: pointer;
 }
 
+/*
 #defaultCanvas0 {
   height: 80%;
   width: 768px;
-  /* set to 0% for larger screens */
+
   margin-right: 0px;
   margin: 0px;
   z-index: -100;
   position: relative;
   display: block;
-}
+} */
 
 #hud {
   max-width: 768px;
@@ -164,7 +167,7 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -100;
+  z-index: -99;
   top: 0;
   left: 0;
 }
@@ -205,6 +208,7 @@ footer p {
   border-width: 10px;
   border-style: outset;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 #howToPlay {
@@ -212,7 +216,7 @@ footer p {
   margin-right: auto;
   position: relative;
   width: 60%;
-  height: 40%;
+  height: 30%;
   font-size: 14px;
   text-align: center;
   background-color: #d1a715;
@@ -224,7 +228,7 @@ footer p {
 }
 
 #howToPlay h1 {
-  font-size: 18px;
+  font-size: 16px;
   width: 95%;
   padding-left: 10px;
   text-align: left;
@@ -261,6 +265,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   z-index: 100;
+  cursor: pointer;
 }
 
 .bordermaker {
@@ -345,10 +350,10 @@ input {
 
 @media screen and (min-width: 600px) {
   /* Styles go here */
-  #defaultCanvas0 {
+  /* #defaultCanvas0 {
     left: -0%;
-    /* set to 0% for larger screens */
-  }
+
+  } */
   #tapTarget {
     right: 40%;
     text-align: center;
@@ -378,7 +383,7 @@ input {
     margin-top: 30px;
   }
   #howToPlay h1 {
-    font-size: 28px;
+    font-size: 24px;
     width: 95%;
     padding-left: 10px;
     text-align: justify;
