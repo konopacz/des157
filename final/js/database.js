@@ -130,7 +130,19 @@ var howToPlay = document.getElementById('howToPlay');
     footer.classList.add("hide");
     btnLogin.classList.add("hide");
 
-    promise.catch(e => console.log(e.message));
+    promise.catch(e => {
+
+      console.log(e.message);
+      alert("You must use a valid email and a 7-character password");
+      txtName.classList.remove("hide");
+      txtEmail.classList.remove("hide");
+      txtPassword.classList.remove("hide");
+      btnSignUp.classList.remove("hide");
+
+      backBtn.classList.remove("hide");
+      footer.classList.remove("hide");
+
+    });
 
   });
 
@@ -153,7 +165,7 @@ var howToPlay = document.getElementById('howToPlay');
     backtoGame.classList.add('hide');
     btnLogin.classList.add("hide");
     howToPlay.classList.add('hide');
-
+    txtPassword.value = '';
   });
 
   continueBtn.addEventListener('click', e => {
