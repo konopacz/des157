@@ -227,6 +227,9 @@ function initMap() {
   var davisSCC2;
   var flower3;
   var flower4;
+  var flower5;
+  var flower6;
+
   var image = '../images/alertbox.gif';
   var character = '../images/alertbox.gif';
 
@@ -236,6 +239,8 @@ function initMap() {
   var star2status = localStorage.getItem("star2");
   var star3status = localStorage.getItem("star3");
   var star4status = localStorage.getItem("star4");
+  var star5status = localStorage.getItem("star5");
+  var star6status = localStorage.getItem("star6");
   console.log(star1status);
   console.log(star2status);
 
@@ -283,11 +288,19 @@ function initMap() {
         lng: position.coords.longitude + 0.0003
       };
       flower3 = {
-        lat: position.coords.latitude + 0.00045,
+        lat: position.coords.latitude + 0.00075,
         lng: position.coords.longitude + 0.0005
       };
       flower4 = {
         lat: position.coords.latitude,
+        lng: position.coords.longitude - 0.0008
+      };
+      flower5 = {
+        lat: position.coords.latitude + 0.00095,
+        lng: position.coords.longitude + 0.0005
+      };
+      flower6 = {
+        lat: position.coords.latitude - 0.0006,
         lng: position.coords.longitude - 0.0006
       };
 
@@ -296,6 +309,8 @@ function initMap() {
       star2status = localStorage.getItem("star2");
       star3status = localStorage.getItem("star3");
       star4status = localStorage.getItem("star4");
+      star5status = localStorage.getItem("star5");
+      star6status = localStorage.getItem("star6");
       console.log(star1status);
       console.log(star2status);
 
@@ -360,6 +375,40 @@ function initMap() {
 
           icon: image,
           position: flower4,
+
+        });
+      }
+
+      if (star5status !== "1") {
+        var star5 = new google.maps.Marker({
+
+          icon: image,
+          position: flower5,
+          map: map
+        });
+      } else {
+
+        var star5 = new google.maps.Marker({
+
+          icon: image,
+          position: flower5,
+
+        });
+      }
+
+      if (star6status !== "1") {
+        var star6 = new google.maps.Marker({
+
+          icon: image,
+          position: flower6,
+          map: map
+        });
+      } else {
+
+        var star6 = new google.maps.Marker({
+
+          icon: image,
+          position: flower6,
 
         });
       }
